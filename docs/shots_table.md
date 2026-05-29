@@ -5,9 +5,14 @@
 The Shots Table shows the data that will be exported.
 Every row represents a spike in the [Spike Graph](spike_graph.md) that is above the threshold and not blacklisted.
 
-When shots are added (aka whitelisted), they are also added to the table regardless of the threshold.
+To delete a shot (and blacklist the frame that was identified as a cut), simply select the row and hit ++delete++.
+Blacklisted frames will not be considered as cuts anymore if the threshold changes.
+Blacklisted frames will be drawn red in the [Spike Graph](spike_graph.md).
 
-These manual cuts are highlgihted in green with a :octicons-plus-circle-16: icon
+When shots are added (aka whitelisted), they are also added to the table regardless of the threshold.
+See [Spike Graph](spike_graph.md) for details on how to add manual cuts and therefore whitelist the respective frames.
+
+These manual cuts are highlighted in green with a :octicons-plus-circle-16: icon and drawn as green spikes in the [Spike Graph](spike_graph.md)
 
 ## Default Data
 The first three columns contain calculated data:
@@ -40,7 +45,44 @@ Then click the :octicons-gear-24: icon of the column that should receive the res
 
 
 ## Text Parsing
-The OCR results may not be perfect. For example, in the above screen recording some of the zeros came through as a $ signs.
-To fix this, you can simply use the "Parse Text" button.
+
+### Search & Replace
+The OCR results may not be perfect. For example, in the above screen recording, some zeros came through as a "$" sign.
+To fix this, you can simply right-click on the column header and select "Search&Replace".
+
+![Image title](assets/cdui_table_header_menu1.png){width=600px}
+
+![Image title](assets/cdui_table_search_replace.png){width=600px}
+
+### Create New Column from Existing Column
+If you want to create a new column that contains parts of the result of an existing column, you can right-click on the column header and select "Extract Additional Column".
+
+E.g.: With values like "S01_010" in the "Shot Name" column, a "Sequence" column can be created that contains just "S01".
+
+![Image title](assets/cdui_table_header_menu2.png){width=600px}
 
 
+!!! note "Select the row whos column value you want to see as a preview in the text extraction window."
+
+
+![Image title](assets/cdui_column_from_text_parse.gif)
+
+#### Tokens
+When using tokens to extract text from a column, the following delimiters are used to split the text:
+
+ "_" (underscore), "." (period), "-" (hyphen), " " (space)
+
+The parts of the text are represented as buttons in token mode: 
+
+![Image title](assets/cdui_tokens.png){width=600px}
+
+Click the button that represents the text part to be used in the new column and a prompt will ask for the new column name as shown in the above recording.
+
+
+#### Sub Strings
+It is also possible to extract substrings using the discrete position of the letters in the text.
+In this case switch to "Use Substring" and simply select the letters that are in the correct position:
+
+![Image title](assets/cdui_substring.png){width=600px}
+
+Clicking "Confirm substring selection" will prompt for the new column name.
