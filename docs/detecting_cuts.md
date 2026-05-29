@@ -17,7 +17,10 @@ To analyse the clip do one of the following:
     If the clip has burn-ins that change for each shot, it may be smart to analyse the burn in instead of the entire clip for more accurate results
 
     If you only want to analyse a specific region of the clip, you can do so by holding ++ctrl++ (++cmd++ on mac) and dragging a rectanble across the region you wish to analyse.
-    Right click to reset the region.
+    
+    See the purple outline in the above image.
+    
+    Right click to delete the drawn region.
 
 
 
