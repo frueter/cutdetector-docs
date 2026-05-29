@@ -5,13 +5,9 @@ A standalone app for automatic cut detection in video files, powered by Brandon 
 Interactively refine analysis results to get precise cuts tailored to your workflow.
 
 
-<br>
-
 <figure markdown="span">
 
-  ![CutDetecorUI](assets/cdui_app.png){ width="300" }
-
-  <figcaption>Image caption</figcaption>
+  ![CutDetecorUI](assets/cdui_app.png){ width="600" }
 
 </figure>
 

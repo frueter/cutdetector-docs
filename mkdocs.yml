@@ -72,5 +72,6 @@ extra_css:
 
 plugins:
   - glightbox
+  - search
 
 copyright: Copyright &copy; 2026 Frank Rueter | OHUfx
