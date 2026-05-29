@@ -58,3 +58,18 @@
 .glightbox-container .gslide-inner-content {
   background: transparent !important;
 }
+
+
+/* ---------- CENTRE ALIGNED LANDING PAGE ---------- */
+.landing-page {
+    text-align: center;
+}
+
+.landing-page .grid {
+    justify-content: center;
+}
+
+.cd-gallery-trigger {
+    display: block;
+    margin: 1.5rem auto;
+}
