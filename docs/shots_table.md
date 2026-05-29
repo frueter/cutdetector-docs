@@ -14,6 +14,8 @@ See [Spike Graph](spike_graph.md) for details on how to add manual cuts and ther
 
 These manual cuts are highlighted in green with a :octicons-plus-circle-16: icon and drawn as green spikes in the [Spike Graph](spike_graph.md)
 
+!!! tip "The Shots Table can be torn off from the main window and used as a floating panel"
+
 ## Default Data
 The first three columns contain calculated data:
 
