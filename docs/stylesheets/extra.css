@@ -1,0 +1,60 @@
+.fixed-width-button {
+    width: 300px;
+    text-align: center;
+}
+
+.custom-logo-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.button-logo {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* =========================================================
+   GLightbox — Material for MkDocs Theme Sync
+   Matches Material light + slate dark mode automatically
+   ========================================================= */
+
+/* ---------- LIGHT MODE ---------- */
+:root {
+  --glightbox-bg: rgba(255, 255, 255, 0.96);
+  --glightbox-overlay: rgba(0, 0, 0, 0.55);
+  --glightbox-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- DARK MODE (Material "slate") ---------- */
+[data-md-color-scheme="slate"] {
+  --glightbox-bg: rgba(15, 18, 22, 0.98);
+  --glightbox-overlay: rgba(0, 0, 0, 0.85);
+  --glightbox-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- BACKDROP OVERLAY ---------- */
+.glightbox-container .gbackdrop {
+  background: var(--glightbox-overlay) !important;
+  backdrop-filter: blur(6px);
+}
+
+/* ---------- IMAGE CONTAINER ---------- */
+.glightbox-container .gslide-media {
+  background: var(--glightbox-bg) !important;
+  box-shadow: var(--glightbox-shadow);
+  border-radius: 10px;
+}
+
+/* ---------- IMAGE ITSELF ---------- */
+.glightbox-container .gslide-image img {
+  background: transparent !important;
+  border-radius: 10px;
+}
+
+/* ---------- REMOVE WHITE FLASH / BORDER ---------- */
+.glightbox-container .gslide-inner-content {
+  background: transparent !important;
+}

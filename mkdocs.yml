@@ -1,4 +1,12 @@
 # https://squidfunk.github.io/mkdocs-material/reference/
+nav:
+  - Home: index.md
+  - Importing: importing.md
+  - Detecting Cuts: detecting_cuts.md
+  - Shots Table: shots_table.md
+  - Spike Graph: spike_graph.md
+  - Contact Sheet: contact_sheet.md
+  - Exporting: exporting.md
 
 site_name: CutDetector Docs
 site_url: https://cutdetector.readthedocs.io/
@@ -30,6 +38,7 @@ theme:
 
 markdown_extensions:
   - attr_list
+  - md_in_html
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -50,11 +59,18 @@ markdown_extensions:
       alternate_style: true
 
   - admonition
+  - attr_list
   - pymdownx.details
 
 extra:
   social:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/3NBMJNbHaP
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - glightbox
 
 copyright: Copyright &copy; 2026 Frank Rueter | OHUfx
