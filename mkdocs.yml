@@ -6,7 +6,11 @@ nav:
   - Shots Table: shots_table.md
   - Spike Graph: spike_graph.md
   - Contact Sheet: contact_sheet.md
+  - Manual Edits: manual_edits.md
   - Exporting: exporting.md
+  - Integrations:
+      - Hiero: hiero.md
+
 
 site_name: CutDetector Docs
 site_url: https://cutdetector.readthedocs.io/
