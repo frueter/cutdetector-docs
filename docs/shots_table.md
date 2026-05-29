@@ -2,17 +2,21 @@
 
 ![Image title](assets/cdui_table3.png){width=300px  align=right }
 
-The Shots Table shows the data that will be exported.
+The Shots Table shows the data that will ultimately be exported, so the name of the game is to edit this exactly to what is needed in the workflow.
+
 Every row represents a spike in the [Spike Graph](spike_graph.md) that is above the threshold and not blacklisted.
 
-To delete a shot (and blacklist the frame that was identified as a cut), simply select the row and hit ++delete++.
+To delete a shot (and blacklist the frame that was identified as a cut), simply select the row and hit ++delete++ or ++backspace++ .
+
 Blacklisted frames will not be considered as cuts anymore if the threshold changes.
+
 Blacklisted frames will be drawn red in the [Spike Graph](spike_graph.md).
 
 When shots are added (aka whitelisted), they are also added to the table regardless of the threshold.
+
 See [Spike Graph](spike_graph.md) for details on how to add manual cuts and therefore whitelist the respective frames.
 
-These manual cuts are highlighted in green with a :octicons-plus-circle-16: icon and drawn as green spikes in the [Spike Graph](spike_graph.md)
+These [manual edits](manual_edits.md) are highlighted in green with a :octicons-plus-circle-16: icon and drawn as green spikes in the [Spike Graph](spike_graph.md)
 
 !!! tip "The Shots Table can be torn off from the main window and used as a floating panel"
 
@@ -41,6 +45,7 @@ Custom column can be removed by right-clicking on their header.
 Each column that has a :octicons-gear-24: icon can receive the results of the text recognition engine (tesseract).
 
 To run text recognition on a column, make sure you are in preview mode (click "Check Cut Points"), hold ++ctrl++ (++cmd++ on mac) and click & drag a rectangle around the area of the image that should be extracted (e.g. part of a burn-in)
+
 Then click the :octicons-gear-24: icon of the column that should receive the resulting text.
 
 ![Image title](assets/cdui_ocr.gif)
@@ -49,7 +54,7 @@ Then click the :octicons-gear-24: icon of the column that should receive the res
 ## Text Parsing
 
 ### Search & Replace
-The OCR results may not be perfect. For example, in the above screen recording, some zeros came through as a "$" sign.
+The OCR results may not be perfect. For example, in the above screen recording, the character "S" sometimes came through as a "$" sign.
 To fix this, you can simply right-click on the column header and select "Search&Replace".
 
 ![Image title](assets/cdui_table_header_menu1.png){width=600px}
