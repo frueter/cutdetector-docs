@@ -73,3 +73,28 @@
     display: block;
     margin: 1.5rem auto;
 }
+
+/* ---------- Content Tabs ---------- */
+.md-typeset .tabbed-labels label[for] {
+    transition: all 0.2s ease;
+}
+
+.md-typeset .tabbed-set input:checked ~ .tabbed-labels label[for] {
+    background-color: #6e451a !important;
+    color: white !important;
+}
+
+.md-typeset .tabbed-labels {
+    gap: 0.4rem;
+    padding: 0.4rem;
+    border-radius: 10px;
+}
+
+.md-typeset .tabbed-labels label[for] {
+    border-radius: 8px;
+}
+
+.md-typeset .tabbed-labels {
+    border-bottom: 2px solid var(--md-default-fg-color--lightest);
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.03);
+}

@@ -29,7 +29,7 @@ The first three columns contain calculated data:
 
 !!! tip "The values of the Timecode column can be modified by specifying a start timecode above the table."
 
-Subsequent columns can receive the results of the text recognition engine (tesseract). Such columns are marked with a :octicons-gear-24: icon.
+Subsequent columns can receive the results of the text recognition engine (tesseract). Such columns are marked with a :octicons-gear-24: icon and can also be edited manually.
 
 
 ## Adding custom columns
@@ -44,7 +44,7 @@ Custom column can be removed by right-clicking on their header.
 ## Text Extraction (OCR)
 Each column that has a :octicons-gear-24: icon can receive the results of the text recognition engine (tesseract).
 
-To run text recognition on a column, make sure you are in preview mode (click "Check Cut Points"), hold ++ctrl++ (++cmd++ on mac) and click & drag a rectangle around the area of the image that should be extracted (e.g. part of a burn-in)
+To run text recognition on a column, make sure you are in [Preview Mode](modes.md) (click "Check Cut Points"), hold ++ctrl++ (++cmd++ on mac) and click & drag a rectangle around the area of the image that should be extracted (e.g. part of a burn-in)
 
 Then click the :octicons-gear-24: icon of the column that should receive the resulting text.
 

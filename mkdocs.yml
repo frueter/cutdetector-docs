@@ -3,6 +3,7 @@ nav:
   - Home: index.md
   - Importing: importing.md
   - Detecting Cuts: detecting_cuts.md
+  - Modes: modes.md
   - Shots Table: shots_table.md
   - Spike Graph: spike_graph.md
   - Contact Sheet: contact_sheet.md
@@ -15,6 +16,8 @@ nav:
 site_name: CutDetector Docs
 site_url: https://cutdetector.readthedocs.io/
 theme:
+  icon:
+    annotation: material/arrow-right-circle
   name: material
   font:
     text: Merriweather Sans
@@ -23,6 +26,7 @@ theme:
   favicon: assets/favicon.ico
   features:
     - navigation.footer
+    - content.tooltips
   palette:
     # Dark Mode
     - scheme: slate
@@ -41,9 +45,27 @@ theme:
       accent: deep orange
 
 markdown_extensions:
+  - material.extensions.preview:
+      configurations:
+        - targets:
+            include:
+              - spike_graph.md
+              - contact_sheet.md
+              - manual_edits.md
+              - importing.md
+              - exporting.md
+              - shots_table.md
+              - hiero_integration.md
+              - detecting_cuts.md
+
   - attr_list
+  - abbr
   - md_in_html
   - pymdownx.keys
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -54,6 +76,9 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.details
+  - admonition
+  - attr_list
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -62,10 +87,6 @@ markdown_extensions:
 
   - pymdownx.tabbed:
       alternate_style: true
-
-  - admonition
-  - attr_list
-  - pymdownx.details
 
 extra:
   social:
