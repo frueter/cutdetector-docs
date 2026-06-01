@@ -5,7 +5,7 @@
 
 The Preview Mode is best suited for verifying the currently defined cuts.
 The preview window on the right represents the current frame, which is to say the frame under the playhead in the [Spike Graph](spike_graph.md)
-The frame number is recorded in the [Shots Table](shots_table.md) in the "Dtart Frame" column.
+The frame number is recorded in the [Shots Table](shots_table.md) in the "Start Frame" column.
 
 Use ++page-up++ and ++page-down++ to navigate through all cuts and check that the left and right preview windows show frames of different shots.
 
