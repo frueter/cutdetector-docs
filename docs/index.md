@@ -10,13 +10,13 @@ Interactively refine analysis results to get precise cuts tailored to your workf
 </a>
 
 
-
+Please join our [Discord](https://discord.gg/puzJUaQdxD) to discuss CutDetector, get help, and share your feedback and ideas for future improvements!
 
 <div class="grid cards" markdown>
 
 [Download the Beta  :fontawesome-brands-dropbox:](https://www.dropbox.com/scl/fo/5v9ekfemn8emglbqad464/AJE6tCLfrTumMXe8mzH65ak?rlkey=sjm60bjkltwsuzqkssxa06yc5&st=4hqtsdg7&dl=0){ .md-button .fixed-width-button }
 
-[Join Us on Discord  :fontawesome-brands-discord:](https://discord.gg/3NBMJNbHaP){ .md-button .fixed-width-button }
+[Join Us on Discord  :fontawesome-brands-discord:](https://discord.gg/puzJUaQdxD){ .md-button .fixed-width-button }
 
 [Release Notes  :octicons-log-24:](https://www.ohufx.com/cutdetector-release-notes){ .md-button .fixed-width-button }
 
@@ -29,7 +29,6 @@ Interactively refine analysis results to get precise cuts tailored to your workf
 
 
 <br>
-
 
 <div class="grid cards" markdown>
 
