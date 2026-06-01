@@ -14,7 +14,7 @@ nav:
 
 
 site_name: CutDetector Docs
-site_url: https://frueter.github.io/cutdetector-docs
+site_url: https://frueter.github.io/cutdetector-docs/
 theme:
   icon:
     annotation: material/arrow-right-circle
