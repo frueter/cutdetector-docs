@@ -14,7 +14,7 @@ nav:
 
 
 site_name: CutDetector Docs
-site_url: https://frueter.github.io/cutdetector-docs/
+site_url: https://frueter.github.io/cutdetector-docs
 theme:
   icon:
     annotation: material/arrow-right-circle
@@ -49,7 +49,7 @@ markdown_extensions:
       configurations:
         - targets:
             include:
-              - spike_graph
+              - spike_graph.md
               - contact_sheet.md
               - manual_edits.md
               - importing.md
