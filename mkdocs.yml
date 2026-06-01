@@ -10,7 +10,7 @@ nav:
   - Manual Edits: manual_edits.md
   - Exporting: exporting.md
   - Integrations:
-      - Hiero: hiero.md
+      - Hiero: hiero_integration.md
 
 
 site_name: CutDetector Docs
