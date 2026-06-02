@@ -71,7 +71,7 @@
 
 .cd-gallery-trigger {
     display: block;
-    margin: 1.5rem auto;
+    margin: 0 auto;
 }
 
 /* ---------- Content Tabs ---------- */
@@ -97,4 +97,27 @@
 .md-typeset .tabbed-labels {
     border-bottom: 2px solid var(--md-default-fg-color--lightest);
     box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.03);
+}
+
+
+/* =========================================================
+    Custom Admonition
+   ========================================================= */
+:root {
+  --md-admonition-icon--task: url("../assets/task.svg");
+
+}
+.md-typeset .admonition.task,
+.md-typeset details.task {
+  border-color: rgb(43, 155, 70);
+}
+.md-typeset .task > .admonition-title,
+.md-typeset .task > summary {
+  background-color: rgba(43, 155, 70, 0.1);
+}
+.md-typeset .task > .admonition-title::before,
+.md-typeset .task > summary::before {
+  background-color: rgb(43, 155, 70);
+  -webkit-mask-image: var(--md-admonition-icon--task);
+          mask-image: var(--md-admonition-icon--task);
 }

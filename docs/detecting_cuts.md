@@ -62,7 +62,7 @@ If the clip was previously analysed, the results are automatically saved in a CS
     * macOS: ~/Library/Application Support/CutDetector/OHUfx
     * Linux: ~/.local/share/CutDetector/OHUfx
 
-!!! note "The location of those csv files should not matter to the user during the regular workflow."
+    !!! note "The location of those csv files should not matter to the user during the regular workflow."
 
-
+!!! info "Saving the project will include the csv data as well, so the *.cdui* project file is fully portable."
 

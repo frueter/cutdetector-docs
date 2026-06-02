@@ -9,10 +9,13 @@ A standalone app for automatic cut detection in video files, powered by Brandon 
   </a>
 </div>
 
+---
+
 Interactively refine analysis results to get precise cuts tailored to your workflow.
 
 ![Image title](assets/cdui_walkthrough.gif)
 
+---
 
 Please join our [Discord](https://discord.gg/puzJUaQdxD) to discuss CutDetector, get help, and share your feedback and ideas for future improvements!
 
@@ -31,6 +34,7 @@ Please join our [Discord](https://discord.gg/puzJUaQdxD) to discuss CutDetector,
 </a>
 </div>
 
+---
 
 
 <div class="grid cards" markdown>
