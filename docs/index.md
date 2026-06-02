@@ -2,12 +2,16 @@
 
 A standalone app for automatic cut detection in video files, powered by Brandon Castellano’s [PySceneDetect](https://www.scenedetect.com).
 
+
+<div style="text-align:center;">
+  <a href="assets/cdui_app.png" class="cd-gallery-trigger">
+    <img src="assets/cdui_app.png" width="600">
+  </a>
+</div>
+
 Interactively refine analysis results to get precise cuts tailored to your workflow.
 
-
-<a href="assets/cdui_app.png" class="cd-gallery-trigger">
-  <img src="assets/cdui_app.png" width="600">
-</a>
+![Image title](assets/cdui_walkthrough.gif)
 
 
 Please join our [Discord](https://discord.gg/puzJUaQdxD) to discuss CutDetector, get help, and share your feedback and ideas for future improvements!
@@ -28,7 +32,6 @@ Please join our [Discord](https://discord.gg/puzJUaQdxD) to discuss CutDetector,
 </div>
 
 
-<br>
 
 <div class="grid cards" markdown>
 
@@ -48,6 +51,5 @@ Please join our [Discord](https://discord.gg/puzJUaQdxD) to discuss CutDetector,
     From importing pixels to exporting usefulness 
 
     [:octicons-arrow-right-24: Get Started](quick_start.md)
-
 
 </div>
