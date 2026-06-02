@@ -1,25 +1,32 @@
 # https://squidfunk.github.io/mkdocs-material/reference/
 nav:
+
   - Home: index.md
-  - Get Started:
-      - Installation: installation.md
+
+  - Setup:
+    - Release Notes: release_notes.md
+    - Installation: installation.md
+
+  - Getting Started:
       - Quick Start: quick_start.md
       - UI Overview: ui_overview.md
       - Shortcuts: shortcuts.md
 
-  - Importing: importing.md
-  - Detecting Cuts: detecting_cuts.md
-  - Modes: modes.md
-  - Shots Table: shots_table.md
-  - Spike Graph: spike_graph.md
-  - Contact Sheet: contact_sheet.md
-  - Manual Edits: manual_edits.md
-  - Exporting: exporting.md
+  - Features:
+    - Importing: importing.md
+    - Detecting Cuts: detecting_cuts.md
+    - Modes: modes.md
+    - Shots Table: shots_table.md
+    - Spike Graph: spike_graph.md
+    - Contact Sheet: contact_sheet.md
+    - Manual Edits: manual_edits.md
+    - Exporting: exporting.md
+
   - Integrations:
       - Hiero: hiero_integration.md
 
 
-site_name: CutDetector Docs
+site_name: CutDetector
 site_url: https://frueter.github.io/cutdetector-docs
 theme:
   icon:
@@ -32,6 +39,8 @@ theme:
   favicon: assets/favicon.ico
   features:
     - navigation.footer
+    - navigation.sections
+    - navigation.tabs
     - content.tooltips
   palette:
     # Dark Mode

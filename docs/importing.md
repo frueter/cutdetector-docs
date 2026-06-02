@@ -1,5 +1,5 @@
 # Importing
-![Image title](assets/cdui_landing_page.png){width=400px  align=right }
+![Image title](assets/cdui_landing_page.png){ width=400px  align=right }
 
 ## Import a Clip
 To import a clip:
