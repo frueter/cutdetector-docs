@@ -41,7 +41,7 @@
 
 ## v0.4.0 (beta)
 
-:material-puzzle-plus: the graph map that appears in Contact Sheet mode is now interactive, and can be used to nagivate the frames
+:material-puzzle-plus: the graph map in Contact Sheet mode is now interactive, and can be used to navigate the frames
 
 :material-puzzle-plus: added option to export a report as .xls with thumbnails
 
@@ -49,7 +49,7 @@
 
 ---
 
-:fontawesome-solid-bug-slash: copy to clipboard exporter has been fixed
+:fontawesome-solid-bug-slash: copy-to-clipboard exporter has been fixed
 
 :fontawesome-solid-bug-slash: exporting otio, xml, aaf and edl now works
 
@@ -67,4 +67,4 @@
 
 :simple-renovate: the last export location is now remembered (also between sessions)
 
-:simple-renovate: otio adapters are now included as source so they can be updated without an needing an app update
+:simple-renovate: OTIO adapters are now included as source so they can be updated without needing an app update

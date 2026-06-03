@@ -12,11 +12,11 @@ To analyse the clip do one of the following:
 <br>
 <br>
 
-??? tip "The analysis can be constraint to a specific region"
+??? tip "The analysis can be constrained to a specific region"
 
-    If the clip has burn-ins that change for each shot, it may be smart to analyse the burn in instead of the entire clip for more accurate results
+    If the clip has burn-ins that change for each shot, it may be smart to analyse the burn-in instead of the entire clip for more accurate results
 
-    If you only want to analyse a specific region of the clip, you can do so by holding ++ctrl++ (++cmd++ on mac) and dragging a rectanble across the region you wish to analyse.
+    If you only want to analyse a specific region of the clip, you can do so by holding ++ctrl++ (++cmd++ on mac) and dragging a rectangle across the region you wish to analyse.
     
     See the purple outline in the above image.
     
