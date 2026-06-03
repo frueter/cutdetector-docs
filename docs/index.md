@@ -5,6 +5,8 @@ hide:
 body_class: landing-page
 ---
 
+
+
 <figure markdown="span">
   ![Image title](assets/logo.png){ width="200" }
   <figcaption></figcaption>
@@ -63,6 +65,7 @@ Refine analysis results to get precise cuts tailored to your workflow.
 
 
 ---
+
 ???+ feature ":material-content-cut: Automatic Cut Detection"
     ![Image title](assets/cdui_app.png){width=600px align=left}
 
