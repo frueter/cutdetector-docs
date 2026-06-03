@@ -12,7 +12,7 @@ nav:
       - UI Overview: ui_overview.md
       - Shortcuts: shortcuts.md
 
-  - Features:
+  - Docs:
     - Importing: importing.md
     - Detecting Cuts: detecting_cuts.md
     - Modes: modes.md

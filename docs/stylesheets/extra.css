@@ -81,11 +81,6 @@
     justify-content: center;
 }
 
-.cd-gallery-trigger {
-    display: block;
-    margin: 0 auto;
-}
-
 .md-typeset .grid.cards {
     display: flex;
     justify-content: center;
@@ -120,10 +115,11 @@
 
 
 /* =========================================================
-    Custom Admonition
+    Custom Admonitions
    ========================================================= */
 :root {
   --md-admonition-icon--task: url("../assets/task.svg");
+  --md-admonition-icon--feature: url("../assets/gears.svg");
 
 }
 .md-typeset .admonition.task,
@@ -140,7 +136,24 @@
   -webkit-mask-image: var(--md-admonition-icon--task);
           mask-image: var(--md-admonition-icon--task);
 }
+.md-typeset .admonition.feature,
+.md-typeset details.feature {
+  border-color: rgb(40, 124, 143);
+}
+.md-typeset .feature > .admonition-title,
+.md-typeset .feature > summary {
+  background-color: rgba(40, 124, 143, 0.1);
+}
+.md-typeset .feature > .admonition-title::before,
+.md-typeset .feature > summary::before {
+  background-color: rgb(40, 124, 143);
+  -webkit-mask-image: var(--md-admonition-icon--feature);
+          mask-image: var(--md-admonition-icon--feature);
+}
 
+/* =========================================================
+    Tabs
+   ========================================================= */
 .md-tabs__link {
     font-weight: 500;
 }
@@ -158,5 +171,6 @@
    ========================================================= */
 .md-typeset .twemoji {
     margin-right: 0.6em;
+    margin-left: 0.6em;
     vertical-align: middle;
 }

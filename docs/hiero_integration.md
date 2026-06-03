@@ -6,7 +6,7 @@ When launching CutDetector from inside of Hiero, a communication channel is esta
 The data that Hiero receives from CutDetector is managed in the Hiero specific plugin that ships with CutDetector.
 
 To make sure Hiero can find CutDetector, use one of the below methods:
-??? task "Default Plugin Folder"
+???+ abstract "Default Plugin Folder"
     Create a file in this location:
     
     `$HOME/.nuke/Python/StartupUI/load_cutdetector.py`
@@ -18,7 +18,7 @@ To make sure Hiero can find CutDetector, use one of the below methods:
     hiero.core.addPluginPath("/path/to/CutDetectorUI/plugins/hiero")
     ```
 
-??? task "Environment Variable"
+??? abstract "Environment Variable"
 
     Set the `HIERO_PLUGIN_PATH` environment variable to the location of CutDetector's plugins folder.
     ```bash

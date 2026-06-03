@@ -1,7 +1,7 @@
 # Quick Start
 
 ## Import a clip and analyse it
-??? task "1. Import a clip"
+???+ task "1. Import a clip"
     Click the `Import a Clip` hyperlink on the landing page and locate the clip you want to analyse.  
     See [Importing](importing.md) for more details. 
 

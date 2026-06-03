@@ -12,6 +12,7 @@ Hotkeys for manual editing:
 | ++delete++/++backspace++ | :material-delete-circle:   Delete/blacklist the current frame  |
 
 There is also a context menu in the graph view:
+
 ![Image title](assets/cdui_context_menu_graph.png){width=300px}
 
 
