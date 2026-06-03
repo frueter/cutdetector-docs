@@ -39,14 +39,13 @@ powered by Brandon Castellano’s <a href="https://www.scenedetect.com">PySceneD
 
 <div class="grid cards" markdown>
 
--   :material-lightbulb-on-outline:{ .lg .middle } __What's New?__
-    [:octicons-arrow-right-24: Release Notes](release_notes.md)
-
--   :octicons-desktop-download-16:{ .lg .middle } __Setup__
+- :octicons-desktop-download-16:{ .lg .middle }
     [:octicons-arrow-right-24: Installation](installation.md)
 
+- :octicons-log-24:{ .lg .middle }
+    [:octicons-arrow-right-24: Release Notes](release_notes.md)
 
-- :material-clock-fast:{ .lg .middle } __GO!__
+- :material-rocket-launch:{ .lg .middle }
     [:octicons-arrow-right-24: Get Started](quick_start.md)
 
 </div>
