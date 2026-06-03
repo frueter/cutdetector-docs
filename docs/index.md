@@ -17,7 +17,13 @@ body_class: landing-page
 
 ---
 
-A standalone app for automatic cut detection in video files, powered by Brandon Castellano’s [PySceneDetect](https://www.scenedetect.com).
+<h4 style="text-align: center;">
+A standalone app for automatic cut detection in video files,<br>
+powered by Brandon Castellano’s <a href="https://www.scenedetect.com">PySceneDetect</a>.
+</h4>
+
+
+
 
 <div class="grid cards" markdown>
 
@@ -26,30 +32,21 @@ A standalone app for automatic cut detection in video files, powered by Brandon 
 [:fontawesome-brands-dropbox:<br>Download the Beta](https://www.dropbox.com/scl/fo/5v9ekfemn8emglbqad464/AJE6tCLfrTumMXe8mzH65ak?rlkey=sjm60bjkltwsuzqkssxa06yc5&st=4hqtsdg7&dl=0){ .md-button .fixed-width-button }
 
 [:fontawesome-brands-discord:<br>Join Us on Discord](https://discord.gg/puzJUaQdxD){ .md-button .fixed-width-button }
-
 </div>
 
+<br>
 
 
 <div class="grid cards" markdown>
 
 -   :material-lightbulb-on-outline:{ .lg .middle } __What's New?__
-
-    ---
-
     [:octicons-arrow-right-24: Release Notes](release_notes.md)
 
 -   :octicons-desktop-download-16:{ .lg .middle } __Setup__
-
-    ---
-    
     [:octicons-arrow-right-24: Installation](installation.md)
 
 
 - :material-clock-fast:{ .lg .middle } __GO!__
-
-    ---
-
     [:octicons-arrow-right-24: Get Started](quick_start.md)
 
 </div>
@@ -64,7 +61,6 @@ Refine analysis results to get precise cuts tailored to your workflow.
 </figure>
 
 
----
 
 ???+ feature ":material-content-cut: Automatic Cut Detection"
     ![Image title](assets/cdui_app.png){width=600px align=left}
