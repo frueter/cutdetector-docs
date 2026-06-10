@@ -64,17 +64,18 @@ Refine analysis results to get precise cuts tailored to your workflow.
 ???+ feature ":material-content-cut: Automatic Cut Detection"
     ![Image title](assets/cdui_app.png){width=600px align=left}
 
+    Stop wasting time by manually cutting up reference clips!
+
     CutDetector automatically detects cuts in a video clip and visualises them in a [Spike Graph](spike_graph.md).
 
-    Use ++ctrl++/++cmd++ to drag a box around a region to limit the cut detection to a specific area (e.g. a burn-in).
+    Drag a box around a region to limit the cut detection to a specific area (e.g. a burn-in).
     
-    The viewer shows the previous and current frame to quickly verify the detection results.
-    
-    The ++grave++ key toggles between [Preview and ContactSheet mode](modes.md).
+    Quickly verify the detection results with the dual viewer UI.
+
 
 ??? feature ":material-calculator: Realtime Shot Extraction"
     ![Image title](assets/cdui_stats.png){width=600px align=right}
-    
+
     The analysis data is automatically saved so that each clip only has to be analysed once (**even between sessions**).
 
     The threshold line can be moved to define which of the spikes signify an actual cut and produce an entry in the shots table.
@@ -82,30 +83,37 @@ Refine analysis results to get precise cuts tailored to your workflow.
 ??? feature ":material-steering: Stay in Control"
     ![Image title](assets/cdui_cs.png){width=600px align=left}
     
+    Clean up the auto-detection with intuitive tools that give you full control.
+
     False positives can simply be selected in the [Shots Table](shots_table.md) and deleted.
 
-    Missing cuts can be identified via the [ContactSheet View](contact_sheet.md) - simply select the first frame of a missed cut and hit ++c++ to add a manual cut point.
+    Missing cuts can easily identified and added via the [ContactSheet View](contact_sheet.md)
 
     Manual edits are visualised in the [Graph View](spike_graph.md) and saved in the session even when the threshold changes later.
 
 ??? feature ":fontawesome-solid-paint-brush: Interact with the Data"
     ![Image title](assets/cdui_manual_selection_no_annot.jpg){width=600px align=right}
     
-    Data spikes can be drawn on (by holding ++alt++) to add them as a manual edit (or to delete false positives).
-    
-    Press ++a++ or ++d++ to add or remove the selected spikes, respectively.
+    Don't just look at the analysis result, interact with it!
+
+    Data spikes can be selected with paint strokes to add them as a manual edit (or to delete false positives).
 
 ??? feature ":material-format-text: Text Extraction"
     ![Image title](assets/cdui_ocr.jpg){width=600px align=left}
     
+    Grab editable text directly from the video burn-ins!    
+
     CutDetector uses [Tesseract](installation.md#tesseract) to extract text from images.
     
-    ++ctrl++/++cmd++ + click drag in the viewer to define the area you want text to be exrtacted from.
-    
-    Click the :octicons-gear-24: icon in the column you want to hold the resulting data.
+    Want to extract text from a burno-in like shot IDs, vfx notes, source timecodes etc? 
+
+    Simply drag a rectangle to define the area you want extract text from and send the result to a column of your choice in the [Shots Table](shots_table.md).
+
 
 ??? feature ":material-factory: Prepare the Data You Need"
     ![Image title](assets/cdui_control.png){width=600px align=right}
+    
+    Full control for 100% results.
     
     Extracted data can be edited in the [Shots Table](shots_table.md) via **search&replace**, new columns can be added to hold more text.
     

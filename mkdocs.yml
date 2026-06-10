@@ -7,10 +7,7 @@ nav:
     - Release Notes: release_notes.md
     - Installation: installation.md
 
-  - Getting Started:
-      - Quick Start: quick_start.md
-      - UI Overview: ui_overview.md
-      - Shortcuts: shortcuts.md
+  - Quick Start: quick_start.md
 
   - Docs:
     - Importing: importing.md
@@ -21,6 +18,8 @@ nav:
     - Contact Sheet: contact_sheet.md
     - Manual Edits: manual_edits.md
     - Exporting: exporting.md
+    - Shortcuts: shortcuts.md
+
 
   - Integrations:
       - Hiero: hiero_integration.md
