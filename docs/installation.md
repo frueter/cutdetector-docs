@@ -2,7 +2,19 @@
 
 ## CutDetector
 CutDetector itself is self contained and can run from where it was downloaded or copied to.
+!!! info "Note"
+    On macOS you may sometimes get a warning about a corrupt app bundle. To fix this, you can try the following:
 
+    <figure>
+      <iframe
+        loading="lazy"
+        src="https://www.youtube.com/embed/MEHFd0PCQh4"
+        title="YouTube video"
+        allowfullscreen>
+      </iframe>
+    </figure>
+
+    Once this is released for good I will look into paying the fee to Apple to certify the app bundle properly so this should go away. 
 
 ## [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html)
 Tesseract OCR is an open-source tool for extracting text from images.
