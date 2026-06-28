@@ -1,10 +1,23 @@
 # Exporting
+To export the cut data as presented in the [Shots Table](shots_table.md),
+use one of the following options:
+
+### Quick Export
 ![Image title](assets/cdui_export_editorial.png){ width=500px }
 
-To export the cut data as presented in the [Shots Table](shots_table.md),
-either use Quick Export or the Export Manager for more control
+The quick export will always export all shots, regardless of the set flags in the table.
 
+
+### Export manager
 ![Image title](assets/cdui_export_manager.png)
+
+The Export Manager lets you:
+
+- Export only flagged shots
+
+- Use custom column values to bundle files, e.g. export otio files per sequence, save thumbnails into sub folder per sequence, etc.
+
+- Export multiple formats  in one go
 
 There are four categories and the respective output formats (as of June 2026):
 
