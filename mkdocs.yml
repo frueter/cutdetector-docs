@@ -11,7 +11,9 @@ nav:
 
   - Docs:
     - Importing: importing.md
+    - Caching: frame_cache.md
     - Detecting Cuts: detecting_cuts.md
+    - Overlay Player: overlay_player.md
     - Modes: modes.md
     - Shots Table: shots_table.md
     - Spike Graph: spike_graph.md
