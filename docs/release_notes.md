@@ -19,18 +19,18 @@
 
 ---
 
-:fontawesome-solid-bug-slash: fixed crash when clicking image during detection
+:fontawesome-solid-bug-slash: Fixed crash when clicking image during detection
 
-:fontawesome-solid-bug-slash: misc bug fixes
+:fontawesome-solid-bug-slash: Misc bug fixes
 
 ---
-:simple-renovate: made playhead in spike graph transparent to see result of white/blacklisting the current frame
+:simple-renovate: Made playhead in spike graph transparent to see result of white/blacklisting the current frame
 
-:simple-renovate: selecting the correct shot after deleting a cut
+:simple-renovate: Selecting the correct shot after deleting a cut
 
-:simple-renovate: progressbar now allows for cancellation of cut detection and exporting
+:simple-renovate: Progressbar now allows for cancellation of cut detection and exporting
 
-:simple-renovate: splitter position is now saved between sessions and in session file
+:simple-renovate: Splitter position is now saved between sessions and in session file
 
 
 
