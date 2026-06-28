@@ -1,11 +1,14 @@
 # Exporting
-![Image title](assets/cdui_export_editorial.png)
+![Image title](assets/cdui_export_editorial.png){ width=500px }
 
-To export the cut data as presented in the [Shots Table](shots_table.md), use the... surprise: File/Export menu!
+To export the cut data as presented in the [Shots Table](shots_table.md),
+either use Quick Export or the Export Manager for more control
+
+![Image title](assets/cdui_export_manager.png)
 
 There are four categories and the respective output formats (as of June 2026):
 
-:material-text-box-edit-outline:Editorial Data...  
+- [x] Editorial Data...  
 ...to be imported into editorial applications:
 
 - [x] otio
