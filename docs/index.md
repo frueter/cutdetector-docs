@@ -18,11 +18,29 @@ body_class: landing-page
 ---
 
 <h4 style="text-align: center;">
-A standalone app for automatic cut detection in video files,<br>
+A standalone app for automatic cut detection and much more,<br>
 powered by Brandon Castellano’s <a href="https://www.scenedetect.com">PySceneDetect</a>.
 </h4>
 
 
+<figure markdown="span">
+  ![Image title](assets/cdui_walkthrough.gif){ width="600"}
+  <figcaption></figcaption>
+</figure>
+
+---
+
+CutDetector automates one of the most time-consuming parts of VFX shot preparation.
+
+Automatically detect cuts with high accuracy, then interactively review and refine the results to ensure every edit is correct before moving on. Whether you're working with offline references edits or vfx string-outs during bidding, you stay in complete control of the final cut list.
+
+Extract metadata directly from video burn-ins using OCR, including shot names, source timecodes, frame numbers, version information, VFX notes, and any other on-screen text.  Smart text processing tools let you clean, reformat, and transform the extracted data so it integrates seamlessly with your studio's pipeline and naming conventions.
+
+Once your sequence is ready, export exactly what your workflow requires. Generate thumbnails for quick visual reference, create sub-clips for every shot, and export editorial data in multiple formats to kick-start your VFX pipeline with clean, production-ready assets.
+
+From client turnover to interal shot preparation, CutDetector helps eliminate repetitive manual work, reduces human error, and gets artists working on shots faster.
+
+---
 
 
 <div class="grid cards" markdown>
@@ -50,14 +68,7 @@ powered by Brandon Castellano’s <a href="https://www.scenedetect.com">PySceneD
 
 </div>
 
----
 
-Refine analysis results to get precise cuts tailored to your workflow.
-
-<figure markdown="span">
-  ![Image title](assets/cdui_walkthrough.gif){ width="600" }
-  <figcaption></figcaption>
-</figure>
 
 
 
