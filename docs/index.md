@@ -12,7 +12,7 @@ body_class: landing-page
   <figcaption></figcaption>
 </figure>
 
-# Welcome to Cut Detector (beta)
+# Welcome to Cut Detector Pro (beta)
 <h2 style="text-align: center;">Making cut detection intuitive & fun</h2>
 
 ---
