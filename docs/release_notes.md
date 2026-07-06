@@ -1,4 +1,38 @@
 # Release Notes
+:material-puzzle-plus: New Feature  :fontawesome-solid-bug-slash: Bug Fix  :simple-renovate: Improvements
+
+## v0.4.2 (beta)
+
+:material-puzzle-plus: Updated help menu to include link to new website 
+
+:material-puzzle-plus: New caching system (jpg bytes) to make interaction snappier
+
+:material-puzzle-plus: New overlay player to play back the currently selected shot
+
+:material-puzzle-plus: New export manager to allow more control over the export process
+
+:material-puzzle-plus: Added thumbnail column to table
+
+:material-puzzle-plus: Added flag column to table to work with the new export manager
+
+:material-puzzle-plus: Added ability to rename custom column headers
+
+---
+
+:fontawesome-solid-bug-slash: Fixed crash when clicking image during detection
+
+:fontawesome-solid-bug-slash: Misc bug fixes
+
+---
+:simple-renovate: Made playhead in spike graph transparent to see result of white/blacklisting the current frame
+
+:simple-renovate: Selecting the correct shot after deleting a cut
+
+:simple-renovate: Progressbar now allows for cancellation of cut detection and exporting
+
+:simple-renovate: Splitter position is now saved between sessions and in session file
+
+
 
 ## v0.4.1 (beta)
 
@@ -20,8 +54,6 @@
 :fontawesome-solid-bug-slash: otio and its adapter packages are now an external package (bundled) for increased flexibility
 
 :fontawesome-solid-bug-slash: some cosmetic changes
-
----
 
 :fontawesome-solid-bug-slash: fixed timecode values
 
