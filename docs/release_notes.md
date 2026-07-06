@@ -11,7 +11,7 @@
 
 :fontawesome-solid-bug-slash: added Preferences UI to manage custom tesseract and ffmpeg paths
 
-:fontawesome-solid-bug-slash: updated Hiero plugin to save the path to CutDetector in the preferences
+:fontawesome-solid-bug-slash: updated Hiero plugin to save the path to CutDetectorPro in the preferences
 
 :fontawesome-solid-bug-slash: updated `pyscenedetect` to latest (v0.7.0)
 

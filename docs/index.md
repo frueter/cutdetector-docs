@@ -66,7 +66,7 @@ Refine analysis results to get precise cuts tailored to your workflow.
 
     Stop wasting time by manually cutting up reference clips!
 
-    CutDetector automatically detects cuts in a video clip and visualises them in a [Spike Graph](spike_graph.md).
+    CutDetectorPro automatically detects cuts in a video clip and visualises them in a [Spike Graph](spike_graph.md).
 
     Drag a box around a region to limit the cut detection to a specific area (e.g. a burn-in).
     
@@ -103,7 +103,7 @@ Refine analysis results to get precise cuts tailored to your workflow.
     
     Grab editable text directly from the video burn-ins!    
 
-    CutDetector uses [Tesseract](installation.md#tesseract) to extract text from images.
+    CutDetectorPro uses [Tesseract](installation.md#tesseract) to extract text from images.
     
     Want to extract text from a burno-in like shot IDs, vfx notes, source timecodes etc? 
 
@@ -151,4 +151,4 @@ Refine analysis results to get precise cuts tailored to your workflow.
     ![Image title](assets/cdui_hiero.png){width=600px align=left}
     
     Using Hiero?  
-    Run CutDetector on a selected bin item and create a sequence on the fly without the need for exporting/importing.
+    Run CutDetectorPro on a selected bin item and create a sequence on the fly without the need for exporting/importing.
