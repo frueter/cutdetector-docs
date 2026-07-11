@@ -6,6 +6,8 @@
 
 :fontawesome-solid-bug-slash: Fixed data communication with Hiero (the new check flag states made this crash silently)
 
+---
+
 ## v0.4.2 (beta)
 
 :material-puzzle-plus: Updated help menu to include link to new website 
