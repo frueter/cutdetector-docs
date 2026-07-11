@@ -1,6 +1,11 @@
 # Release Notes
 :material-puzzle-plus: New Feature  :fontawesome-solid-bug-slash: Bug Fix  :simple-renovate: Improvements
 
+## v0.4.3 (beta)
+:fontawesome-solid-bug-slash: Fixed Hiero plugin (Cut Detector option did not show up in Hiero)
+
+:fontawesome-solid-bug-slash: Fixed data communication with Hiero (the new check flag states made this crash silently)
+
 ## v0.4.2 (beta)
 
 :material-puzzle-plus: Updated help menu to include link to new website 
