@@ -27,7 +27,7 @@ nav:
       - Hiero: hiero_integration.md
 
 
-site_name: CutDetector
+site_name: CutDetectorPro
 site_url: https://frueter.github.io/cutdetector-docs
 theme:
   icon:

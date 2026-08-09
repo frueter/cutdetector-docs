@@ -53,14 +53,14 @@ There are currently two options to analyse the clip:
 </div>
 
 ## Re-use previous analysis
-If the clip was previously analysed, the results are automatically saved in a CSV file and CutDetector will offer to just read those values:
+If the clip was previously analysed, the results are automatically saved in a CSV file and CutDetectorPro will offer to just read those values:
 
 ![Image title](assets/cdui_existing_csv.png)
 
 ??? info "The per-clip csv files are saved in different locations depending on the operating system:"
-    * Windows: %APPDATA%\\CutDetector\\OHUfx (Roaming profile)
-    * macOS: ~/Library/Application Support/CutDetector/OHUfx
-    * Linux: ~/.local/share/CutDetector/OHUfx
+    * Windows: %APPDATA%\\CutDetectorPro\\OHUfx (Roaming profile)
+    * macOS: ~/Library/Application Support/CutDetectorPro/OHUfx
+    * Linux: ~/.local/share/CutDetectorPro/OHUfx
 
     !!! note "The location of those csv files should not matter to the user during the regular workflow."
 
