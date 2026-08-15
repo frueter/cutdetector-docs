@@ -30,7 +30,13 @@
    ========================================================= */
 
 /* ---------- LIGHT MODE ---------- */
+[data-md-color-scheme="default"] {
+    --md-default-bg-color: #f6f6f6;
+    --md-accent-fg-color: #cc887f;
+}
+
 :root {
+  --md-default-bg-color: #afafaf;
   --glightbox-bg: rgba(255, 255, 255, 0.96);
   --glightbox-overlay: rgba(0, 0, 0, 0.55);
   --glightbox-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
@@ -38,10 +44,32 @@
 
 /* ---------- DARK MODE (Material "slate") ---------- */
 [data-md-color-scheme="slate"] {
+  --md-default-bg-color: #474747;
+  --md-default-fg-color: #c1c1c1;
+  --md-accent-fg-color: #668c82;
   --glightbox-bg: rgba(15, 18, 22, 0.98);
   --glightbox-overlay: rgba(0, 0, 0, 0.85);
   --glightbox-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
 }
+
+
+
+
+/* ---------- GRID CARDS Installation, Release Notes and Getting Started---------- */
+[data-md-color-scheme="slate"] .md-typeset .grid.cards li {
+    border-color: #a1a1a1;
+}
+
+[data-md-color-scheme="default"] .md-typeset .grid.cards li {
+    border-color: #595858;
+}
+
+/* ---------- GRID CARDS Installation, Download Beta, Join Us on Discord---------- */
+[data-md-color-scheme="slate"] .md-typeset .grid.cards .md-button {
+    color: #a1a1a1;
+    border-color: #a5a3a3;
+}
+
 
 /* ---------- BACKDROP OVERLAY ---------- */
 .glightbox-container .gbackdrop {
