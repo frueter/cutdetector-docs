@@ -1,6 +1,7 @@
 ---
 hide:
   - navigation
+  - toc
 
 body_class: landing-page
 ---
