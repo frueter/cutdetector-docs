@@ -1,0 +1,209 @@
+.md-typeset h1 {
+    text-align: center;
+}
+
+.landing-page .md-typeset {
+    text-align: center;
+}
+
+.fixed-width-button {
+    width: 300px;
+    text-align: center;
+}
+
+.custom-logo-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.button-logo {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* =========================================================
+   GLightbox — Material for MkDocs Theme Sync
+   Matches Material light + slate dark mode automatically
+   ========================================================= */
+
+/* ---------- LIGHT MODE ---------- */
+[data-md-color-scheme="default"] {
+    --md-default-bg-color: #f6f6f6;
+    --md-accent-fg-color: #cc887f;
+}
+
+:root {
+  --md-default-bg-color: #afafaf;
+  --glightbox-bg: rgba(255, 255, 255, 0.96);
+  --glightbox-overlay: rgba(0, 0, 0, 0.55);
+  --glightbox-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- DARK MODE (Material "slate") ---------- */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #474747;
+  --md-default-fg-color: #c1c1c1;
+  --md-accent-fg-color: #668c82;
+  --glightbox-bg: rgba(15, 18, 22, 0.98);
+  --glightbox-overlay: rgba(0, 0, 0, 0.85);
+  --glightbox-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.md-typeset hr {
+    border: 0;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid var(--md-accent-fg-color);
+}
+
+/* ---------- GRID CARDS Installation, Release Notes and Getting Started---------- */
+[data-md-color-scheme="slate"] .md-typeset .grid.cards li {
+    border-color: #a1a1a1;
+}
+
+[data-md-color-scheme="default"] .md-typeset .grid.cards li {
+    border-color: #595858;
+}
+
+/* ---------- GRID CARDS Installation, Download Beta, Join Us on Discord---------- */
+[data-md-color-scheme="slate"] .md-typeset .grid.cards .md-button {
+    color: #a1a1a1;
+    border-color: #a5a3a3;
+}
+
+
+/* ---------- BACKDROP OVERLAY ---------- */
+.glightbox-container .gbackdrop {
+  background: var(--glightbox-overlay) !important;
+  backdrop-filter: blur(6px);
+}
+
+/* ---------- IMAGE CONTAINER ---------- */
+.glightbox-container .gslide-media {
+  background: var(--glightbox-bg) !important;
+  box-shadow: var(--glightbox-shadow);
+  border-radius: 10px;
+}
+
+/* ---------- IMAGE ITSELF ---------- */
+.glightbox-container .gslide-image img {
+  background: transparent !important;
+  border-radius: 10px;
+}
+
+/* ---------- REMOVE WHITE FLASH / BORDER ---------- */
+.glightbox-container .gslide-inner-content {
+  background: transparent !important;
+}
+
+
+/* ---------- CENTRE ALIGNED LANDING PAGE ---------- */
+.landing-page {
+    text-align: center;
+}
+
+.landing-page .grid {
+    justify-content: center;
+}
+
+.md-typeset .grid.cards {
+    justify-content: center;
+}
+
+.md-typeset .grid.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* ---------- Content Tabs ---------- */
+.md-typeset .tabbed-labels label[for] {
+    transition: all 0.2s ease;
+}
+
+.md-typeset .tabbed-set input:checked ~ .tabbed-labels label[for] {
+    background-color: #6e451a !important;
+    color: white !important;
+}
+
+.md-typeset .tabbed-labels {
+    gap: 0.4rem;
+    padding: 0.4rem;
+    border-radius: 10px;
+}
+
+.md-typeset .tabbed-labels label[for] {
+    border-radius: 8px;
+}
+
+.md-typeset .tabbed-labels {
+    border-bottom: 2px solid var(--md-default-fg-color--lightest);
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.03);
+}
+
+
+/* =========================================================
+    Custom Admonitions
+   ========================================================= */
+:root {
+  --md-admonition-icon--task: url("../assets/task.svg");
+  --md-admonition-icon--feature: url("../assets/gears.svg");
+
+}
+.md-typeset .admonition.task,
+.md-typeset details.task {
+  border-color: rgb(43, 155, 70);
+}
+.md-typeset .task > .admonition-title,
+.md-typeset .task > summary {
+  background-color: rgba(43, 155, 70, 0.1);
+}
+.md-typeset .task > .admonition-title::before,
+.md-typeset .task > summary::before {
+  background-color: rgb(43, 155, 70);
+  -webkit-mask-image: var(--md-admonition-icon--task);
+          mask-image: var(--md-admonition-icon--task);
+}
+.md-typeset .admonition.feature,
+.md-typeset details.feature {
+  border-color: rgb(40, 124, 143);
+}
+.md-typeset .feature > .admonition-title,
+.md-typeset .feature > summary {
+  background-color: rgba(40, 124, 143, 0.1);
+}
+.md-typeset .feature > .admonition-title::before,
+.md-typeset .feature > summary::before {
+  background-color: rgb(40, 124, 143);
+  -webkit-mask-image: var(--md-admonition-icon--feature);
+          mask-image: var(--md-admonition-icon--feature);
+}
+
+/* =========================================================
+    Tabs
+   ========================================================= */
+.md-tabs__link {
+    font-weight: 500;
+}
+
+.md-tabs__link--active {
+    font-weight: 700;
+}
+
+.md-tabs__item--active {
+    border-bottom: 3px solid var(--md-accent-fg-color);
+}
+
+/* =========================================================
+    More space after icons
+   ========================================================= */
+.md-typeset .twemoji {
+    margin-right: 0.6em;
+    margin-left: 0.6em;
+    vertical-align: middle;
+}
