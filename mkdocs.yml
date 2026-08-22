@@ -3,6 +3,8 @@ nav:
 
   - Home: index.md
 
+  - Buy Now: buy.md
+
   - Setup:
     - Release Notes: release_notes.md
     - Installation: installation.md
