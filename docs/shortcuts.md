@@ -13,6 +13,8 @@
 |-------------------------|------------------|
 | ++ctrl+i++ / ++cmd+i++  | Import a Clip    |
 | ++enter++               | Analyse the clip |
+| ++i++                   | Set the [sub-range](sub_range.md) in point to the current frame (before analysis)  |
+| ++o++                   | Set the [sub-range](sub_range.md) out point to the current frame (before analysis) |
 
 ## Spike Graph
 | Shortcut                | Function                                                            |

@@ -14,9 +14,11 @@ body_class: landing-page
 
     **1-year license**
 
-    *1 license*
+    *2 activations*
 
-    --
+     --
+
+    US$29.50 per activation
 
     <a href="https://ohufx.lemonsqueezy.com/checkout/buy/bc83759c-86a5-4a98-a0da-f7ed8e1c6212?embed=1" class="lemonsqueezy-button md-button">
     :material-cart-outline: Buy Now
@@ -24,13 +26,16 @@ body_class: landing-page
 
 - ### Team 1
 
-    **US$139**
+    **US$99**
 
-    **3 × 1-year licenses**
-
-    *US$46.33 per license*
+    **1-year license**
+    
+    *4 activations*
 
     --
+
+    *US$24.75 per activation*
+
 
     <a href="https://ohufx.lemonsqueezy.com/checkout/buy/58a48d95-9fc1-4c1a-af15-0f91c7503fda?embed=1" class="lemonsqueezy-button md-button">
     :material-cart-outline: Buy Now
@@ -38,13 +43,15 @@ body_class: landing-page
 
 - ### Team 2
 
-    **US$199**
+    **US$149**
 
-    **5 × 1-year licenses**
+    **1-year license**
 
-    *US$39.80 per license*
+    *8 activations*
 
     --
+
+    *US$18.62 per activation*
 
     <a href="https://ohufx.lemonsqueezy.com/checkout/buy/a7e0b157-93c9-4871-a0a1-761e01484111?embed=1" class="lemonsqueezy-button md-button">
     :material-cart-outline: Buy Now
@@ -54,9 +61,8 @@ body_class: landing-page
 
 <div class="pricing-note" markdown>
 
-:material-information-outline: **Each license includes 2 activations.**
+:material-information-outline: Licenses can be deactivated and reactivated at any time.
 
-Licenses can be deactivated and reactivated at any time.
 
 </div>
 
