@@ -3,7 +3,7 @@ nav:
 
   - Home: index.md
 
-  - Buy Now: buy.md
+#  - Buy Now: buy.md
 
   - Setup:
     - Release Notes: release_notes.md

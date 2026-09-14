@@ -1,6 +1,23 @@
 # Release Notes
 :material-puzzle-plus: New Feature  :fontawesome-solid-bug-slash: Bug Fix  :simple-renovate: Improvements
 
+## v0.5.0 (beta)
+:material-puzzle-plus: Added licensing system. A license is now required which is free for beta testing (joi our Discord server to get the link).
+Activate the app via the Help menu.
+
+:material-puzzle-plus: Added support to analyse only a sub range. https://cutdetectorpro.com/sub_range/
+
+:material-puzzle-plus: Added "local" frame numbers to the overlay. These are relative to the current shot and start at 1 
+
+:material-puzzle-plus: Added bug reported dialog to help menu
+
+:simple-renovate: Moved info about the current cut from the window title to the task bar
+
+:fontawesome-solid-bug-slash: Fixed buffer overflow when trying to export a large amount of cuts
+
+---
+
+
 ## v0.4.3 (beta)
 :fontawesome-solid-bug-slash: Fixed Hiero plugin (Cut Detector option did not show up in Hiero)
 
