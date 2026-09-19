@@ -14,12 +14,12 @@ The selection in the [Shots Table](shots_table.md) is synced with the playhead p
 
 !!! info "Use hotkeys to navigate frames and cut points:"
 
-    ++left++ and ++right++ to move the playhead frame by frame ==this only works in *preview* mode==
+    ++left++ and ++right++ to move the playhead frame by frame ==this only works in *preview* mode==. After analysis, the playhead stays within the analysed [sub-range](sub_range.md).
 
     
-    ++page-up++ and ++page-down++ to move the playhead frame by frame ==this works in both *graph* and *contact sheet* mode==
+    ++page-up++ and ++page-down++ to jump between cut points (table rows) ==this works in both *graph* and *contact sheet* mode==
 
-    ++up++ and ++down++ to jump between cut points (table rows)
+    ++up++ and ++down++ to jump between cut points (table rows). On the first or last shot, nothing happens.
 
     ++alt++ + `click&drag` to paint-select spikes for manual editing
 

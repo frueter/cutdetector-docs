@@ -1,6 +1,27 @@
 # Release Notes
 :material-puzzle-plus: New Feature  :fontawesome-solid-bug-slash: Bug Fix  :simple-renovate: Improvements
 
+## v0.5.1 (beta)
+:material-puzzle-plus: Hiero: CutDetectorPro can now be launched from a track item in the timeline. The range used by the track item is analysed and the track item is cut up in place. See [Hiero](hiero_integration.md)
+
+:material-puzzle-plus: Hiero: when launched from a bin item, the clip's in/out points are used as a [sub-range](sub_range.md)
+
+:simple-renovate: Hiero: each CutDetectorPro window now sends its results back to the item it was launched from, so multiple sessions can run side by side
+
+:simple-renovate: Caching now respects the requested sub-range. Changing the range no longer starts caching by itself, but new frames of the range get cached if caching is already on
+
+:fontawesome-solid-bug-slash: Fixed a crash when analysing single frame shots
+
+:fontawesome-solid-bug-slash: Fixed the left/right arrow keys moving the playhead outside of the analysed range
+
+:fontawesome-solid-bug-slash: Fixed the first table row not being selected after analysing a sub-range
+
+:fontawesome-solid-bug-slash: Fixed page-up/page-down selecting beyond the first and last shot
+
+:fontawesome-solid-bug-slash: Fixed clicking and dragging in the spike graph landing on the wrong frame
+
+---
+
 ## v0.5.0 (beta)
 :material-puzzle-plus: Added licensing system. A license is now required which is free for beta testing (joi our Discord server to get the link).
 Activate the app via the Help menu.

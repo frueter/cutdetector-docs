@@ -12,6 +12,12 @@ Actions such as scrubbing, using the [Overlay Player](overlay_player.md), displa
 
 However, for best performance, hit that ghost, watch Pacman do his thing, and enjoy a smoother UI experience afterwards.
 
+## Caching a sub-range
+
+If you have requested a [sub-range](sub_range.md) (in/out points), hitting the ghost only caches the frames of that range instead of the whole clip.
+
+Changing the range never switches caching on by itself. But if caching is already on, changing the range makes CutDetectorPro cache any frames of the new range that are not cached yet.
+
 
 !!! note "Cut analysis is not affected by this."
 

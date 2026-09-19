@@ -33,13 +33,19 @@ The requested range is set **before** analysis, using any of the following:
 
     Frame numbers here are 1-based, matching the numbers shown on screen. Omit either flag to default to the start or end of the clip.
 
-Moving a handle or setting an in/out point immediately starts pre-caching that range, so the [frame cache](frame_cache.md) bar fills in for the region you're about to analyse.
+    When you launch CutDetectorPro from [Hiero](hiero_integration.md), these are set for you: from the timeline, the range is the track item's source range, and from the bin it is the clip's in/out points (if any are set).
+
+Changing the range never switches caching on by itself. If [caching](frame_cache.md) is already switched on, any frames of the new range that are not cached yet get cached, so the cache bar fills in for the region you're about to analyse. If caching is off, clicking the cache button caches the requested range only, rather than the whole clip.
+
+Before analysis you can scrub the whole clip to find your in and out points. The preview starts at the range's in point.
 
 ## Analysing the range
 
 Once a range is requested, clicking "Analyse" only runs the detector between the requested in and out points — the rest of the clip is skipped entirely, which is faster than a full-clip analysis on long media.
 
-The [Spike Graph](spike_graph.md) and [Shots Table](shots_table.md) will only ever show data for the analysed range; the last shot's duration is capped at the range's out point rather than running to the end of the full clip.
+The [Spike Graph](spike_graph.md) and [Shots Table](shots_table.md) will only ever show data for the analysed range; the last shot's duration is capped at the range's out point rather than running to the end of the full clip. The first shot of the range is selected once the analysis completes.
+
+After analysis, the ++left++ and ++right++ keys (and the ++page-up++/++page-down++ and ++up++/++down++ shot navigation) stay within the analysed range, so the playhead can't step outside of it.
 
 !!! tip "Re-using a previous analysis"
     The saved stats CSV is named after the requested range, so a previous analysis is only offered for reuse when its range matches exactly (see [Detecting Cuts](detecting_cuts.md)). Analysing a different range always triggers a fresh detection pass; a full-clip analysis (no range set) keeps using the original filename for compatibility with older cache files.

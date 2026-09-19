@@ -40,6 +40,8 @@
 |-----------------|------------------------------------------------------------------------------------------|
 | ++up++          | Select previous row in shots table (aka a shot)                                          |
 | ++down++        | Select next row in shots table                                                           |
+| ++left++        | Move the playhead one frame back (stays within the analysed [sub-range](sub_range.md))   |
+| ++right++       | Move the playhead one frame forward (stays within the analysed [sub-range](sub_range.md))|
 | ++alt++ + click | Alt+click a table row will jump to the respective frame and switch to contact sheet mode |
 
 ## General
@@ -47,8 +49,8 @@
 |----------------------------|------------------------------------|
 | ++grave++ (backtick)       | Toggle contact sheet view          |
 | ++delete++ / ++backspace++ | Delete a cut point                 |
-| ++page-up++                | Select previous row in shots table |
-| ++page-down++              | Select next row in shots table     |
+| ++page-up++                | Select previous row in shots table (does nothing on the first shot) |
+| ++page-down++              | Select next row in shots table (does nothing on the last shot)      |
 | ++ctrl+s++ / ++cmd+s++     | Save project file (*.cdui)         |
 | ++ctrl+o++ / ++cmd+o++     | Open project file (*.cdui)         |
 | ++ctrl+q++ / ++cmd+q++     | Quit                               |
