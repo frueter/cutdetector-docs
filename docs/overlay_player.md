@@ -1,25 +1,25 @@
-# Overlay Player
+# Shot Playback
 
-![Image title](assets/cdui_overlay_player.gif)
+![The overlay player](assets/cdui_overlay_player.gif)
 
-## Play back the current shot
-The simple overlay player plays back the currently selected shot in the [Shots Table](shots_table.md) using the source media's fps.
+Want to see how a shot actually plays? Press ++space++ and a small player opens right over the window and plays the shot that is selected in the [Shots Table](shots_table.md), at the source media's frame rate.
 
-Playback will cache the frames using the [Global Frame Cache](frame_cache.md)
+Before you have analysed the clip, ++space++ plays the whole clip from the start.
 
-If the frames are not cached when the player is opened, playback may be slower than expected, but after one run through playback should be smooth.
+## Controls
 
+| Key | What it does |
+|-----|--------------|
+| ++space++ | Open the player |
+| ++right++ | Step forward one frame |
+| ++left++ | Step back one frame |
+| ++up++ | Jump to the first frame |
+| ++down++ | Jump to the last frame |
+| ++escape++ | Close the player |
 
-### Controlling the player
+<!-- MEDIA: the existing gif is great here. -->
 
-- ++space++: Open the player
+!!! tip "The first run can be choppy"
 
-- ++right++: Step forward by one frame
-
-- ++left++: Step backward by one frame
-
-- ++up++: Jump to first frame
-
-- ++down++: Jump to last frame
-
-- ++escape++: Close player
+    The player uses the [frame cache](frame_cache.md). If the shot isn't cached yet, the first playback may be slower than real time.
+    After one run through, it plays smoothly. Fill the cache up front and it's smooth from the start.

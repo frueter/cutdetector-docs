@@ -1,70 +1,84 @@
 # Hiero
 
-The Hiero integration is done via a simple [IPC](https://en.wikipedia.org/wiki/Inter-process_communication){ target=_blank rel="noopener noreferrer" } approach.  
-When launching CutDetectorPro from inside of Hiero, a communication channel is established between the two processes to send data back to Hiero.
+Using Foundry's Hiero? Launch CutDetectorPro right from a bin item or a track item and get **soft cuts** back, with no exporting and importing in between.
 
-The data that Hiero receives from CutDetectorPro is managed in the Hiero specific plugin that ships with CutDetectorPro.
+!!! info "Needs an activated license"
 
-To make sure Hiero can find CutDetectorPro, use one of the below methods:
-???+ abstract "Default Plugin Folder"
-    Create a file in this location:
-    
+    The `Apply` button that sends results back to Hiero is one of the features that is switched off in demo mode. See [Install & Activate](installation.md#2-activate-your-license).
+
+## Set it up
+
+Hiero needs to know where CutDetectorPro's plugin lives. Pick one of these:
+
+=== ":material-folder-cog: Default plugin folder"
+
+    Create this file:
+
     `$HOME/.nuke/Python/StartupUI/load_cutdetector.py`
-    
-    Paste the below into it and save it.
+
+    Paste the following into it and save:
+
     ```python
     import hiero.core
-    # update the below with the valid path to CutDetectorPro's location 
+    # update the below with the valid path to CutDetectorPro's location
     hiero.core.addPluginPath("/path/to/CutDetectorPro/plugins/hiero")
     ```
 
-??? abstract "Environment Variable"
+=== ":material-variable: Environment variable"
 
-    Set the `HIERO_PLUGIN_PATH` environment variable to the location of CutDetectorPro's plugins folder.
+    Set `HIERO_PLUGIN_PATH` to the location of CutDetectorPro's plugin folder:
+
     ```bash
     export HIERO_PLUGIN_PATH=/path/to/CutDetectorPro/plugins/hiero
     ```
 
-    !!! warning "If you are already using HIERO_PLUGIN_PATH, you probably want to append to its value instead of overwriting it"
+    !!! warning "Already using HIERO_PLUGIN_PATH?"
 
-Once either of the above is set up correctly, open Hiero and you should see CutDetectorPro in the context menu for bin items and for track items in the timeline:
+        Append to its value instead of overwriting it.
 
-![Image title](assets/cdui_hiero_menu.png){width=500px}
+Restart Hiero. You should now see **Cut Detector** in the context menu of bin items and of track items in the timeline:
 
-When CutDetectorPro is launched this way, an additional `Apply` button will appear under the [Shots Table](shots_table.md).  
-![Image title](assets/cdui_hiero_apply.png){width=500px}
+![The CutDetectorPro entry in Hiero's context menu](assets/cdui_hiero_menu.png){ width=500px }
 
-This button will send the cut data back to Hiero:
-![Image title](assets/cdui_hiero_sending_data.png){width=500px}
+## Use it
 
-What Hiero does with the data depends on where you launched CutDetectorPro from.
+Launched this way, CutDetectorPro shows an extra `Apply` button under the [Shots Table](shots_table.md):
 
-## Launching from a bin item
+![The Apply button](assets/cdui_hiero_apply.png){ width=500px }
 
-Right-click a clip in the bin and choose CutDetectorPro. Once you hit `Apply`, the bundled plugin turns the cut data into a new Sequence with soft cuts, which is added to the same bin as the clip:
-![Image title](assets/cdui_hiero_received_data.png){width=500px}
+Click it to send the cuts back to Hiero:
 
-If the clip has an in and/or out point set in Hiero, CutDetectorPro opens with that range already requested, so only that part of the clip is analysed (see [Analysing a Sub-Range](sub_range.md)). Without in/out points the whole clip is analysed.
+![Sending data to Hiero](assets/cdui_hiero_sending_data.png){ width=500px }
 
-## Launching from a track item
+What Hiero does with them depends on where you started.
 
-Right-click a track item in the timeline and choose CutDetectorPro. The range of the clip that is used by the track item (its source in and out points) is requested automatically, so only the part of the clip that is actually in your cut gets analysed.
+=== ":material-folder-open: From a bin item"
 
-Once you hit `Apply`, the track item is cut up in place, right where it sits on the timeline:
+    Right-click a clip in the bin and choose **Cut Detector**. When you hit `Apply`, the plugin builds a new **Sequence** with soft cuts and adds it to the same bin as the clip:
 
-- The track item is split at every cut, using soft cuts.
-- The resulting pieces are named after their shot names.
-- Shots that start outside the track item's range are ignored.
+    ![The new sequence in Hiero](assets/cdui_hiero_received_data.png){ width=500px }
 
-## Multiple sessions
+    If the clip has an in and/or out point set in Hiero, CutDetectorPro opens with that range already requested, so only that part is analysed (see [Sub-range analysis](sub_range.md)).
+    Without in/out points the whole clip is analysed.
 
-You can have several CutDetectorPro windows open at the same time. Each window sends its results back to the item it was launched from, no matter which of them you apply first.
+=== ":material-timeline: From a track item"
 
-## Custom columns
+    Right-click a track item in the timeline and choose **Cut Detector**. The part of the clip the track item uses (its source in and out) is requested for you, so only the footage that is actually in your cut gets analysed.
 
-If you have added custom columns using OCR (see [Shots Table](shots_table.md#adding-custom-columns)), the results are added to each shot in Hiero as a `CutDetectorPro` tag, in both of the above workflows.
+    When you hit `Apply`, the track item is cut up **in place**:
+
+    - It's split at every cut, as soft cuts.
+    - The pieces are named after their shot names.
+    - Shots that start outside the track item's range are ignored.
+
+<!-- MEDIA: two 10 s clips. 1) right-click a bin item > Cut Detector > Apply > new sequence appears. 2) right-click a track item on the timeline > Apply > the item is razored into named shots. -->
+
+## Good to know
+
+- **Several windows at once.** You can have multiple CutDetectorPro windows open. Each one sends its results back to the item it was launched from, whichever you apply first.
+- **Text goes along.** If you [extracted text with OCR](ocr.md), the results arrive in Hiero as a `CutDetectorPro` tag on each shot, in both workflows.
+- **Behind the scenes.** CutDetectorPro and Hiero talk over a simple [inter-process connection](https://en.wikipedia.org/wiki/Inter-process_communication){ target=_blank rel="noopener noreferrer" }. The plugin that ships with CutDetectorPro turns the incoming data into Hiero cuts.
 
 !!! note "Requires CutDetectorPro 0.5.1 or later"
-    Launching from the timeline, and requesting the range from in/out points, are not available in earlier versions.
 
-*[IPC]: Inter Process Communication
+    Launching from the timeline, and requesting the range from in/out points, are not available in earlier versions.

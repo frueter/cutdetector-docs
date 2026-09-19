@@ -23,14 +23,14 @@
 ---
 
 ## v0.5.0 (beta)
-:material-puzzle-plus: Added licensing system. A license is now required which is free for beta testing (joi our Discord server to get the link).
+:material-puzzle-plus: Added licensing system. A license is now required which is free for beta testing (join our Discord server to get the link).
 Activate the app via the Help menu.
 
 :material-puzzle-plus: Added support to analyse only a sub range. https://cutdetectorpro.com/sub_range/
 
 :material-puzzle-plus: Added "local" frame numbers to the overlay. These are relative to the current shot and start at 1 
 
-:material-puzzle-plus: Added bug reported dialog to help menu
+:material-puzzle-plus: Added bug report dialog to help menu
 
 :simple-renovate: Moved info about the current cut from the window title to the task bar
 
@@ -82,7 +82,7 @@ Activate the app via the Help menu.
 ## v0.4.1 (beta)
 
 :material-puzzle-plus: added clip exporter (Export/Media/Clips).  
-!!! note "This needs [ffmpeg](installation.md#ffmpeg) installed"
+!!! note "This needs [ffmpeg](installation.md#ffmpeg-clip-export) installed"
 
 :material-puzzle-plus: added thumbnail exporter (Export/Media/Thumbnails)
 

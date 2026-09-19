@@ -1,31 +1,32 @@
 # Contact Sheet
-![Image title](assets/cdui_contactsheet.png)
 
-When pressing the "Find Missing Cuts" button, the UI switches to [Contact Sheet Mode](modes.md) mode.
+![The contact sheet](assets/cdui_contactsheet.png){ .shot }
 
-In this mode all frames of the currently selected shot are shown, so that it is easy to quickly spot a cut that was missed
-by the auto-detection.  
-To add a cut, simply click on the frame that should be the first frame of a new shot and hit ++c++.
+The contact sheet is the best way to find cuts the detector **missed**.
+Click **Find Missing Cuts** (or press ++grave++) and every frame of the current shot is laid out in a grid.
+A missed cut is easy to spot: the picture suddenly changes.
 
-The graph view is now zoomed in to only draw spikes for the current shot. This helps to quicly find missed cuts within the shot bound.
+## Add a missing cut
 
-A small graph map is shown above the main [Spike Graph](spike_graph.md) to provide an overview where the current shot is located within the globla frame range. 
+1. Look through the frames of the shot for the point where a new shot begins.
+2. Click the **first frame of the new shot** (or move to it with the arrow keys).
+3. Press ++c++.
 
----
+That's it. The cut is added to the [Shots Table](shots_table.md) and stays there, even if you change the threshold later.
 
-:fontawesome-solid-sliders:
-The sliders under the contact sheet view allow for adjusting the brightness and size of the displayed frames.
+<!-- MEDIA: 8 s loop: scroll a shot in the contact sheet, click the first frame of the hidden new shot, press C, the table gets a green row. -->
 
----
+## Find your way around
 
-!!! tip "Use hotkeys to change the selected shot and thus the displayed frame set:"
+- The [Spike Graph](spike_graph.md) zooms in to only show the spikes of the current shot, which helps to spot a missed cut inside it.
+- A small **graph map** above the main graph shows where the current shot sits within the whole clip.
+- Use the :fontawesome-solid-sliders: **sliders** under the sheet to change the brightness and size of the thumbnails. Brighten dark shots, or enlarge the frames to compare details.
 
-    ++page-up++ and ++page-down++ to move the shot selection in the table up or down
+!!! tip "Keys for the contact sheet"
 
-!!! tip "In [Contact Sheet Mode](modes.md) the arrow keys drive the selected frame (orange outline)" 
+    - ++page-up++ / ++page-down++ move to the previous or next shot.
+    - ++left++ / ++right++ select the previous or next frame.
+    - ++up++ / ++down++ select the frame above or below.
+    - ++grave++ switches back to the graph.
 
-    ++up++ and ++down++ select the frame aboe or below the current selection
-
-    ++left++ and ++right++ select the previoud/next frame
-
-!!! info "Use ++grave++ to toggle between graph and [Contact Sheet Mode](modes.md)."
+    The selected frame has an orange outline.

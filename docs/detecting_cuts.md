@@ -1,68 +1,81 @@
 # Detecting Cuts
 
-## First time analysis
+Press a button, wait a moment, and every change in the picture shows up as a spike in the [Spike Graph](spike_graph.md).
 
-![Image title](assets/cdui_analyse.png){width=300px  align=right }
+## Analyse a clip
 
-To analyse the clip do one of the following:
- 
-* Click the "Analyse" button in the lower left corner
-* Press "Enter"
+![The Analyse button and detector options](assets/cdui_qs_analyse.png){ width=300px align=right }
 
-<br>
-<br>
+Do one of the following:
 
-??? tip "The analysis can be constrained to a specific region"
+- Click **Analyse** in the lower left corner
+- Press ++enter++
 
-    If the clip has burn-ins that change for each shot, it may be smart to analyse the burn-in instead of the entire clip for more accurate results
+That's it. CutDetectorPro compares every frame with the one before it and draws the difference as a spike.
+Then you [set the threshold](spike_graph.md#the-threshold) to decide which spikes count as cuts.
 
-    If you only want to analyse a specific region of the clip, you can do so by holding ++ctrl++ (++cmd++ on mac) and dragging a rectangle across the region you wish to analyse.
-    
-    See the purple outline in the above image.
-    
-    Right click to delete the drawn region.
+<!-- MEDIA: 5 s loop: press Enter, the progress bar runs, the spike graph fills in and the shots table appears. -->
 
+## Pick a detector
 
-
-
-There are currently two options to analyse the clip:
+There are two ways to analyse a clip. Choose with the **Content** and **Adaptive** buttons next to Analyse.
 
 <div class="grid cards" markdown>
 
--   :material-chart-timeline:{ .lg .middle } __Content__
+- :material-content-cut:{ .lg .middle } **Content**
 
     ---
 
-    The content-aware scene detector detects jump cuts in the input video.
-    This is typically what people think of as "cuts" between scenes in a movie - given two adjacent frames, do they belong to the same scene?
-    The content-aware scene detector finds areas where the difference between two subsequent frames exceeds a given threshold value that is set.
-    The threshold can be adjusted interactively once the detection is complete (see [Sike Graph](spike_graph.md))
+    The classic detector. It spots hard cuts by measuring how much two neighbouring frames differ.
+    Anything above your threshold is a cut, and you can move the threshold after the analysis is done.
 
-    [:octicons-arrow-right-24: Details](https://www.scenedetect.com/api/#adaptive-content-detector:~:text=Content%2DAware%20Detector)
+    [:octicons-arrow-right-24: Details](https://www.scenedetect.com/api/#adaptive-content-detector:~:text=Content%2DAware%20Detector){ target=_blank rel="noopener noreferrer" }
 
-
-- :material-chart-timeline:{ .lg .middle } __Adaptive__
+- :material-camera-control:{ .lg .middle } **Adaptive**
 
     ---
 
-    The adaptive content detector compares the difference in content between adjacent frames similar to detect-content but instead using a rolling average of adjacent frame changes.
-    This helps mitigate false detections where there is fast camera motion.
+    Like Content, but it compares each change with a rolling average of the frames around it.
+    Try it when fast camera moves cause false cuts.
 
-    [:octicons-arrow-right-24: Details](https://www.scenedetect.com/api/#adaptive-content-detector:~:text=content%20for%20details.-,Adaptive%20Content%20Detector,-The%20adaptive%20content)
+    [:octicons-arrow-right-24: Details](https://www.scenedetect.com/api/#adaptive-content-detector:~:text=content%20for%20details.-,Adaptive%20Content%20Detector,-The%20adaptive%20content){ target=_blank rel="noopener noreferrer" }
 
 </div>
 
-## Re-use previous analysis
-If the clip was previously analysed, the results are automatically saved in a CSV file and CutDetectorPro will offer to just read those values:
+## Analyse only part of the picture
 
-![Image title](assets/cdui_existing_csv.png)
+Got a burn-in that changes with every shot? Analysing just the burn-in is often more accurate than analysing the whole frame.
 
-??? info "The per-clip csv files are saved in different locations depending on the operating system:"
-    * Windows: %APPDATA%\\CutDetectorPro\\OHUfx (Roaming profile)
-    * macOS: ~/Library/Application Support/CutDetectorPro/OHUfx
-    * Linux: ~/.local/share/CutDetectorPro/OHUfx
+![A purple rectangle drawn over the burn-in](assets/cdui_analyse.png){ width=300px align=right }
 
-    !!! note "The location of those csv files should not matter to the user during the regular workflow."
+1. Hold ++ctrl++ (++cmd++ on macOS) and drag a rectangle over the region.
+2. A purple outline shows the area. Only that area is analysed.
+3. Right-click to delete the rectangle again.
 
-!!! info "Saving the project will include the csv data as well, so the *.cdui* project file is fully portable."
+<!-- MEDIA: 6 s loop: ctrl-drag a rectangle over a burn-in, press Enter. -->
 
+!!! info "This is different from a sub-range"
+
+    The rectangle limits the analysis to a **region of each frame**.
+    A [sub-range](sub_range.md) limits it to a **span of frames**. You can combine both.
+
+## Re-use a previous analysis
+
+You only ever analyse a clip once. The results are saved automatically, and next time you import the same clip CutDetectorPro offers to load them instead:
+
+![The dialog offering to reuse an existing analysis](assets/cdui_existing_csv.png){ .shot }
+
+??? info "Where the saved analyses live"
+
+    Each clip gets its own `csv` file:
+
+    - **Windows:** `%APPDATA%\CutDetectorPro\OHUfx` (roaming profile)
+    - **macOS:** `~/Library/Application Support/CutDetectorPro/OHUfx`
+    - **Linux:** `~/.local/share/CutDetectorPro/OHUfx`
+
+    You normally never need to look in there.
+
+!!! tip "Sharing your work"
+
+    Saving a project bundles the analysis data into the `.cdui` file, so the file is fully portable.
+    See [Import & Sessions](importing.md).

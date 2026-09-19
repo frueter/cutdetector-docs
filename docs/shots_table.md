@@ -1,95 +1,54 @@
 # Shots Table
 
-![Image title](assets/cdui_table3.png){width=300px  align=right }
+![The shots table](assets/cdui_table3.png){ width=300px align=right }
 
-The Shots Table shows the data that will ultimately be exported, so the name of the game is to edit this exactly to what is needed in the workflow.
+The Shots Table is your result: what you see here is what gets exported. So the goal of everything else is to make this table exactly what your workflow needs.
 
-Every row represents a spike in the [Spike Graph](spike_graph.md) that is above the threshold and not blacklisted.
+## Where the rows come from
 
-To delete a shot (and blacklist the frame that was identified as a cut), simply select the row and hit ++delete++ or ++backspace++ .
+Every row is a spike in the [Spike Graph](spike_graph.md) that is above the threshold, plus every cut you added by hand.
 
-Blacklisted frames will not be considered as cuts anymore if the threshold changes.
+- **Delete a shot** by selecting the row and pressing ++delete++ or ++backspace++. The frame is blacklisted, so it stays gone if the threshold changes. Blacklisted frames are drawn red in the graph.
+- **Added cuts** (whitelisted frames) always get a row, whatever the threshold. They are highlighted in green with a :octicons-plus-circle-16: icon, and drawn as green spikes in the graph.
 
-Blacklisted frames will be drawn red in the [Spike Graph](spike_graph.md).
+See [Review & Fix Cuts](review.md) for how to add and remove cuts.
 
-When shots are added (aka whitelisted), they are also added to the table regardless of the threshold.
+!!! tip "Tear it off"
 
-See [Spike Graph](spike_graph.md) for details on how to add manual cuts and therefore whitelist the respective frames.
+    The Shots Table can be torn off from the main window and used as a floating panel.
 
-These [manual edits](manual_edits.md) are highlighted in green with a :octicons-plus-circle-16: icon and drawn as green spikes in the [Spike Graph](spike_graph.md)
+## The default columns
 
-!!! tip "The Shots Table can be torn off from the main window and used as a floating panel"
+| Column | What it holds |
+|--------|---------------|
+| **Start Frame** | The first frame of the shot |
+| **Timecode** | The timecode of that frame. You can set a start timecode above the table to change it. |
+| **Duration** | The length of the shot in frames |
+| :material-flag: **Flag** | A checkbox for picking specific shots to export. See [Exporting](exporting.md). |
 
-## Default Data
-The first three columns contain calculated data:
+Columns after those hold text. They are marked with a :octicons-gear-24: icon when they can receive text from the [text recognition](ocr.md), and you can also edit them by hand.
 
-- Start Frame
-- Timecode
-- Duration (in frames)
+## Add your own columns
 
-!!! tip "The values of the Timecode column can be modified by specifying a start timecode above the table."
+Click the :octicons-plus-16: button in the upper right corner of the table to add a column with a name of your choice, such as "VFX Notes".
 
-Subsequent columns can receive the results of the text recognition engine (tesseract). Such columns are marked with a :octicons-gear-24: icon and can also be edited manually.
+Custom columns can receive [OCR text](ocr.md#extract-text-from-the-image) or hold the result of [splitting another column](ocr.md#split-a-column-into-new-ones), for example to pull a sequence name out of a shot name.
+Right-click a custom column's header to remove it.
 
+## Next: get text into the table
 
-## Adding custom columns
-Using the :octicons-plus-16: button in the upper right corner of the table, you can add new columns with custom headers (e.g. "vfx notes")
+<div class="grid cards" markdown>
 
-Custom columns can be used to receive OCR data, or to store the result of parsing the values of another OCR column (e.g. to extract a sequence name from a shot name).
+- :material-format-text:{ .lg .middle } **Text extraction (OCR)**
 
-See [below for details](#text-parsing).
+    Read shot names, timecodes and notes straight off the burn-in.
 
-Custom column can be removed by right-clicking on their header.
+    [:octicons-arrow-right-24: Text extraction](ocr.md)
 
-## Text Extraction (OCR)
-Each column that has a :octicons-gear-24: icon can receive the results of the text recognition engine (tesseract).
+- :material-export-variant:{ .lg .middle } **Export**
 
-To run text recognition on a column, make sure you are in [Preview Mode](modes.md) (click "Check Cut Points"), hold ++ctrl++ (++cmd++ on mac) and click & drag a rectangle around the area of the image that should be extracted (e.g. part of a burn-in)
+    Send the table to editorial, reports, media or your tracker.
 
-Then click the :octicons-gear-24: icon of the column that should receive the resulting text.
+    [:octicons-arrow-right-24: Exporting](exporting.md)
 
-![Image title](assets/cdui_ocr.gif)
-
-
-## Text Parsing
-
-### Search & Replace
-The OCR results may not be perfect. For example, in the above screen recording, the character "S" sometimes came through as a "$" sign.
-To fix this, you can simply right-click on the column header and select "Search&Replace".
-
-![Image title](assets/cdui_table_header_menu1.png){width=600px}
-
-![Image title](assets/cdui_table_search_replace.png){width=600px}
-
-### Create New Column from Existing Column
-If you want to create a new column that contains parts of the result of an existing column, you can right-click on the column header and select "Extract Additional Column".
-
-E.g.: With values like "S01_010" in the "Shot Name" column, a "Sequence" column can be created that contains just "S01".
-
-![Image title](assets/cdui_table_header_menu2.png){width=600px}
-
-
-!!! note "Select the row whos column value you want to see as a preview in the text extraction window."
-
-
-![Image title](assets/cdui_column_from_text_parse.gif)
-
-#### Tokens
-When using tokens to extract text from a column, the following delimiters are used to split the text:
-
- "_" (underscore), "." (period), "-" (hyphen), " " (space)
-
-The parts of the text are represented as buttons in token mode: 
-
-![Image title](assets/cdui_tokens.png){width=600px}
-
-Click the button that represents the text part to be used in the new column and a prompt will ask for the new column name as shown in the above recording.
-
-
-#### Sub Strings
-It is also possible to extract substrings using the discrete position of the letters in the text.
-In this case switch to "Use Substring" and simply select the letters that are in the correct position:
-
-![Image title](assets/cdui_substring.png){width=600px}
-
-Clicking "Confirm substring selection" will prompt for the new column name.
+</div>

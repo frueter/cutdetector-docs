@@ -1,185 +1,389 @@
-.md-typeset h1 {
-    text-align: center;
-}
-
-
-.fixed-width-button {
-    width: 300px;
-    text-align: center;
-}
-
-.custom-logo-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-.button-logo {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-}
-
 /* =========================================================
-   GLightbox — Material for MkDocs Theme Sync
-   Matches Material light + slate dark mode automatically
+   CutDetectorPro docs — custom styling
+   Palette taken from the logo / app: slate navy + sage green.
    ========================================================= */
 
-/* ---------- LIGHT MODE ---------- */
+/* ---------------------------------------------------------
+   1. Colour palette (theme.palette uses "custom" for both)
+   --------------------------------------------------------- */
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color:        #26394a;
+  --md-primary-fg-color--light: #3b556d;
+  --md-primary-fg-color--dark:  #1a2834;
+  --md-primary-bg-color:        #ffffff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.7);
+}
+
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color:              #3f8a76;
+  --md-accent-fg-color--transparent: rgba(63, 138, 118, 0.1);
+  --md-accent-bg-color:              #ffffff;
+  --md-accent-bg-color--light:       rgba(255, 255, 255, 0.7);
+}
+
+/* Light */
 [data-md-color-scheme="default"] {
-    --md-default-bg-color: #f6f6f6;
-    --md-accent-fg-color: #cc887f;
+  --md-default-bg-color:  #ffffff;
+  --md-typeset-a-color:   #2f7563;
+  --cdp-surface:          #f4f7f7;   /* cards, hero */
+  --cdp-border:           #d5dfde;
+  --cdp-cta:              #2f7563;   /* primary button */
+  --cdp-cta-hover:        #26594b;
+  --cdp-shadow:           0 0.4rem 1.6rem rgba(38, 57, 74, 0.14);
 }
 
-:root {
-  --md-default-bg-color: #afafaf;
-  --glightbox-bg: rgba(255, 255, 255, 0.96);
-  --glightbox-overlay: rgba(0, 0, 0, 0.55);
-  --glightbox-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-}
-
-/* ---------- DARK MODE (Material "slate") ---------- */
+/* Dark (Material "slate") */
 [data-md-color-scheme="slate"] {
-  --md-default-bg-color: #474747;
-  --md-default-fg-color: #c1c1c1;
-  --md-accent-fg-color: #668c82;
-  --glightbox-bg: rgba(15, 18, 22, 0.98);
-  --glightbox-overlay: rgba(0, 0, 0, 0.85);
-  --glightbox-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  --md-default-bg-color:  #1b232b;
+  --md-default-fg-color:  rgba(255, 255, 255, 0.87);
+  --md-default-fg-color--light: rgba(255, 255, 255, 0.62);
+  --md-code-bg-color:     #232d37;
+  --md-footer-bg-color:   #151b21;
+  --md-typeset-a-color:   #86c6b1;
+  --md-accent-fg-color:   #86c6b1;
+  --md-accent-fg-color--transparent: rgba(134, 198, 177, 0.12);
+  --cdp-surface:          #232d37;
+  --cdp-border:           #364453;
+  --cdp-cta:              #4f9d87;
+  --cdp-cta-hover:        #5fae97;
+  --cdp-shadow:           0 0.4rem 1.6rem rgba(0, 0, 0, 0.45);
+}
+
+/* ---------------------------------------------------------
+   2. Global typography & elements
+   --------------------------------------------------------- */
+.md-typeset h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .md-typeset hr {
-    border: 0;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom: 1px solid var(--md-accent-fg-color);
+  border: 0;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid var(--cdp-border);
 }
 
-/* ---------- GRID CARDS Installation, Release Notes and Getting Started---------- */
-[data-md-color-scheme="slate"] .md-typeset .grid.cards li {
-    border-color: #a1a1a1;
+/* screenshots and gifs */
+.md-typeset img {
+  border-radius: 8px;
 }
 
-[data-md-color-scheme="default"] .md-typeset .grid.cards li {
-    border-color: #595858;
+.md-typeset img.shot,
+.md-typeset .shot img {
+  border: 1px solid var(--cdp-border);
+  box-shadow: var(--cdp-shadow);
 }
 
-/* ---------- GRID CARDS Installation, Download Beta, Join Us on Discord---------- */
-[data-md-color-scheme="slate"] .md-typeset .grid.cards .md-button {
-    color: #a1a1a1;
-    border-color: #a5a3a3;
+/* a bit of room around inline icons */
+.md-typeset .twemoji {
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+  vertical-align: middle;
 }
 
-
-/* ---------- BACKDROP OVERLAY ---------- */
-.glightbox-container .gbackdrop {
-  background: var(--glightbox-overlay) !important;
-  backdrop-filter: blur(6px);
+/* header: slightly stronger tab underline */
+.md-tabs__link {
+  font-weight: 500;
+  opacity: 0.85;
 }
 
-/* ---------- IMAGE CONTAINER ---------- */
-.glightbox-container .gslide-media {
-  background: var(--glightbox-bg) !important;
-  box-shadow: var(--glightbox-shadow);
-  border-radius: 10px;
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  font-weight: 700;
+  opacity: 1;
 }
 
-/* ---------- IMAGE ITSELF ---------- */
-.glightbox-container .gslide-image img {
-  background: transparent !important;
-  border-radius: 10px;
+.md-tabs__item--active {
+  border-bottom: 3px solid var(--md-accent-fg-color);
 }
 
-/* ---------- REMOVE WHITE FLASH / BORDER ---------- */
-.glightbox-container .gslide-inner-content {
-  background: transparent !important;
+/* ---------------------------------------------------------
+   3. Buttons
+   --------------------------------------------------------- */
+.md-typeset .md-button {
+  border-radius: 2rem;
+  padding: 0.55em 1.6em;
+  font-weight: 600;
+  color: var(--md-typeset-a-color);
+  border-color: currentColor;
 }
 
-
-/* ---------- CENTRE ALIGNED LANDING PAGE ---------- */
-.landing-page {
-    text-align: center;
+.md-typeset .md-button--primary {
+  background-color: var(--cdp-cta);
+  border-color: var(--cdp-cta);
+  color: #ffffff;
 }
 
-
-.landing-page .grid {
-    justify-content: center;
+.md-typeset .md-button--primary:hover,
+.md-typeset .md-button--primary:focus {
+  background-color: var(--cdp-cta-hover);
+  border-color: var(--cdp-cta-hover);
+  color: #ffffff;
 }
 
-.landing-page .md-typeset {
-    text-align: center;
+/* a row of buttons */
+.cdp-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 1.5rem 0;
 }
 
-
-.md-typeset .grid.cards {
-    justify-content: center;
+.cdp-cta p {
+  margin: 0;
 }
 
-.md-typeset .grid.cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+/* ---------------------------------------------------------
+   4. Landing page
+   The landing pages (index.md, buy.md) set `body_class: landing-page`.
+   Only the blocks marked with .cdp-* are centred, so lists such as the
+   FAQ stay left aligned.
+   --------------------------------------------------------- */
+.cdp-center {
+  text-align: center;
 }
 
-/* ---------- Content Tabs ---------- */
+.cdp-hero {
+  text-align: center;
+  padding: 2.5rem 1rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.cdp-hero h1 {
+  font-size: 2.6rem;
+  line-height: 1.15;
+  margin: 0.3rem auto 0.8rem;
+  max-width: 22ch;
+  text-align: center;
+}
+
+.cdp-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--md-accent-fg-color);
+  margin: 0;
+}
+
+.cdp-lead {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 46rem;
+  margin: 0 auto;
+  color: var(--md-default-fg-color--light);
+}
+
+.cdp-hero img {
+  max-width: min(100%, 900px);
+  margin-top: 1rem;
+  border: 1px solid var(--cdp-border);
+  box-shadow: var(--cdp-shadow);
+}
+
+/* the logo is not a screenshot: no frame */
+.cdp-hero figure img {
+  border: 0;
+  box-shadow: none;
+  margin-top: 0;
+}
+
+.cdp-credit {
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* section headings with a short sub-line */
+.cdp-section {
+  text-align: center;
+  margin: 3.5rem 0 1.2rem;
+}
+
+.cdp-section h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.7rem;
+}
+
+.cdp-section p {
+  margin: 0 auto;
+  max-width: 40rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* cards: steps and features */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > ol > li {
+  border: 1px solid var(--cdp-border);
+  background: var(--cdp-surface);
+  border-radius: 0.7rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid.cards > ol > li:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--cdp-shadow);
+  border-color: var(--md-accent-fg-color);
+}
+
+.md-typeset .grid.cards hr {
+  width: 100%;
+  border-color: var(--cdp-border);
+}
+
+/* numbered "how it works" cards: number badge, then icon + title on the same row; lighter body text */
+.cdp-steps > ul {
+  counter-reset: cdp-step;
+}
+
+.cdp-steps > ul > li {
+  counter-increment: cdp-step;
+}
+
+/* title row (icon + bold text) with the number badge in front */
+.cdp-steps > ul > li > p:first-child {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.cdp-steps > ul > li > p:first-child::before {
+  content: counter(cdp-step);
+  flex: none;
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-right: 1rem;
+  line-height: 1.7rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  color: #ffffff;
+  background: var(--cdp-cta);
+}
+
+/* body text of all cards (not the pricing cards): a lighter weight, links and bold text keep theirs */
+.md-typeset .grid.cards:not(.pricing-cards) > ul > li > p:not(:first-child) {
+  font-weight: 300;
+}
+
+.md-typeset .grid.cards:not(.pricing-cards) > ul > li > p:not(:first-child) a {
+  font-weight: 400;
+}
+
+.md-typeset .grid.cards:not(.pricing-cards) > ul > li > p:not(:first-child) strong {
+  font-weight: 700;
+}
+
+/* the home page FAQ: two thirds of the width, centred (full width on small screens) */
+.cdp-faq {
+  width: 66.667%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 44.98em) {
+  .cdp-faq {
+    width: 100%;
+  }
+}
+
+/* closing call to action band */
+.cdp-band {
+  text-align: center;
+  margin: 4rem 0 1rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #26394a 0%, #2f5a55 100%);
+  color: #ffffff;
+}
+
+.cdp-band h2,
+.cdp-band p {
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.cdp-band .md-button {
+  color: #ffffff;
+}
+
+.cdp-band .md-button--primary {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #26394a;
+}
+
+.cdp-band .md-button--primary:hover {
+  background-color: #e6f1ee;
+  border-color: #e6f1ee;
+  color: #26394a;
+}
+
+/* ---------------------------------------------------------
+   5. Content tabs
+   --------------------------------------------------------- */
 .md-typeset .tabbed-labels label[for] {
-    transition: all 0.2s ease;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.md-typeset .tabbed-labels {
+  gap: 0.4rem;
+  padding: 0.4rem;
+  border-radius: 10px;
+  border-bottom: 2px solid var(--md-default-fg-color--lightest);
 }
 
 .md-typeset .tabbed-set input:checked ~ .tabbed-labels label[for] {
-    background-color: #6e451a !important;
-    color: white !important;
+  background-color: var(--cdp-cta) !important;
+  color: #ffffff !important;
 }
 
-.md-typeset .tabbed-labels {
-    gap: 0.4rem;
-    padding: 0.4rem;
-    border-radius: 10px;
-}
-
-.md-typeset .tabbed-labels label[for] {
-    border-radius: 8px;
-}
-
-.md-typeset .tabbed-labels {
-    border-bottom: 2px solid var(--md-default-fg-color--lightest);
-    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.03);
-}
-
-
-/* =========================================================
-    Custom Admonitions
-   ========================================================= */
+/* ---------------------------------------------------------
+   6. Custom admonitions (task, feature)
+   --------------------------------------------------------- */
 :root {
   --md-admonition-icon--task: url("../assets/task.svg");
   --md-admonition-icon--feature: url("../assets/gears.svg");
-
 }
+
 .md-typeset .admonition.task,
 .md-typeset details.task {
   border-color: rgb(43, 155, 70);
 }
+
 .md-typeset .task > .admonition-title,
 .md-typeset .task > summary {
   background-color: rgba(43, 155, 70, 0.1);
 }
+
 .md-typeset .task > .admonition-title::before,
 .md-typeset .task > summary::before {
   background-color: rgb(43, 155, 70);
   -webkit-mask-image: var(--md-admonition-icon--task);
           mask-image: var(--md-admonition-icon--task);
 }
+
 .md-typeset .admonition.feature,
 .md-typeset details.feature {
   border-color: rgb(40, 124, 143);
 }
+
 .md-typeset .feature > .admonition-title,
 .md-typeset .feature > summary {
   background-color: rgba(40, 124, 143, 0.1);
 }
+
 .md-typeset .feature > .admonition-title::before,
 .md-typeset .feature > summary::before {
   background-color: rgb(40, 124, 143);
@@ -187,128 +391,196 @@
           mask-image: var(--md-admonition-icon--feature);
 }
 
-/* =========================================================
-    Tabs
-   ========================================================= */
-.md-tabs__link {
-    font-weight: 500;
+/* FAQ (`??? question`): muted sage instead of Material's bright green */
+[data-md-color-scheme="default"] {
+  --cdp-faq: #6b8f83;
 }
 
-.md-tabs__link--active {
-    font-weight: 700;
+[data-md-color-scheme="slate"] {
+  --cdp-faq: #7fa396;
 }
 
-.md-tabs__item--active {
-    border-bottom: 3px solid var(--md-accent-fg-color);
+.md-typeset .admonition.question,
+.md-typeset details.question {
+  border-color: var(--cdp-faq);
 }
 
-/* =========================================================
-    More space after icons
-   ========================================================= */
-.md-typeset .twemoji {
-    margin-right: 0.6em;
-    margin-left: 0.6em;
-    vertical-align: middle;
+.md-typeset .question > .admonition-title,
+.md-typeset .question > summary {
+  background-color: color-mix(in srgb, var(--cdp-faq) 12%, transparent);
 }
 
+.md-typeset .question > .admonition-title::before,
+.md-typeset .question > summary::before {
+  background-color: var(--cdp-faq);
+}
 
+.md-typeset .question > summary::after {
+  color: var(--cdp-faq);
+}
 
-/* =========================================================
-    Pricing Cards
-   ========================================================= */
+/* ---------------------------------------------------------
+   7. GLightbox — sync with the Material light/dark palettes
+   --------------------------------------------------------- */
+:root {
+  --glightbox-bg: rgba(255, 255, 255, 0.96);
+  --glightbox-overlay: rgba(0, 0, 0, 0.55);
+  --glightbox-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+[data-md-color-scheme="slate"] {
+  --glightbox-bg: rgba(15, 18, 22, 0.98);
+  --glightbox-overlay: rgba(0, 0, 0, 0.85);
+  --glightbox-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.glightbox-container .gbackdrop {
+  background: var(--glightbox-overlay) !important;
+  backdrop-filter: blur(6px);
+}
+
+.glightbox-container .gslide-media {
+  background: var(--glightbox-bg) !important;
+  box-shadow: var(--glightbox-shadow);
+  border-radius: 10px;
+}
+
+.glightbox-container .gslide-image img {
+  background: transparent !important;
+  border-radius: 10px;
+}
+
+.glightbox-container .gslide-inner-content {
+  background: transparent !important;
+}
+
+/* ---------------------------------------------------------
+   8. Pricing cards (buy.md, currently disabled in the nav)
+   --------------------------------------------------------- */
 .pricing-cards > ul {
-    gap: 1rem !important;
-    grid-auto-rows: 1fr;
-
+  gap: 1rem !important;
+  grid-auto-rows: 1fr;
 }
 
 .pricing-cards > ul > li {
-    display: flex;
-    flex-direction: column;
-    min-height: 19rem;
-    height: 100%;
-    text-align: center;
-    padding: 1.5rem !important;
-    border-radius: 0.6rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.pricing-cards > ul > li:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  min-height: 19rem;
+  height: 100%;
+  text-align: center;
+  padding: 1.5rem !important;
+  border-radius: 0.6rem;
 }
 
 .pricing-cards h3 {
-    margin-bottom: 1rem !important;
+  margin-bottom: 1rem !important;
 }
 
 .pricing-cards strong {
-    display: block;
+  display: block;
 }
 
-/* Price */
+/* price */
 .pricing-cards > ul > li > p:nth-of-type(1) strong {
-    font-size: 2rem;
-    line-height: 1.2;
+  font-size: 2rem;
+  line-height: 1.2;
 }
 
-/* Best Value */
+/* best value */
 .pricing-cards > ul > li:nth-child(2) {
-    border: 2px solid var(--md-accent-fg-color) !important;
-    transform: translateY(-0.3rem);
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.12);
+  border: 2px solid var(--md-accent-fg-color) !important;
+  transform: translateY(-0.3rem);
+  box-shadow: var(--cdp-shadow);
 }
 
 .pricing-cards > ul > li:nth-child(2):hover {
-    transform: translateY(-0.5rem);
+  transform: translateY(-0.5rem);
 }
 
 .pricing-cards > ul > li:nth-child(2) > p:first-of-type {
-    color: var(--md-accent-fg-color);
-    font-size: 0.7rem;
-    letter-spacing: 0.08em;
-    margin-bottom: 0.5rem;
+  color: var(--md-accent-fg-color);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
 }
 
-/* Buttons */
 .pricing-cards > ul > li > p:last-child {
-    margin-top: auto;
+  margin-top: auto;
 }
 
 .pricing-cards .md-button {
-    width: 100%;
-    max-width: 12rem;
-    font-weight: 600;
+  width: 100%;
+  max-width: 12rem;
 }
 
 .pricing-note {
-    max-width: 600px;
-    margin: 2rem auto 0;
-    padding: 1rem 1.5rem;
-    text-align: center;
-    font-size: 0.9rem;
-    border: 1px solid var(--md-accent-fg-color);
-    border-radius: 0.6rem;
-    background: color-mix(
-        in srgb,
-        var(--md-accent-fg-color) 8%,
-        transparent
-    );
+  max-width: 600px;
+  margin: 2rem auto 0;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  border: 1px solid var(--md-accent-fg-color);
+  border-radius: 0.6rem;
+  background: color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent);
 }
 
 .pricing-note p:first-child {
-    margin-top: 0;
-    font-size: 1rem;
+  margin-top: 0;
+  font-size: 1rem;
 }
 
 .pricing-note p:last-child {
-    margin-bottom: 0;
-}
-
-.pricing-note strong {
-    font-weight: 700;
+  margin-bottom: 0;
 }
 
 .md-content__inner:has(.pricing-cards) > h1 {
-    display: none !important;
+  display: none !important;
+}
+
+/* ---------------------------------------------------------
+   9. Link preview popups (hover previews) and tooltips
+   Material paints them with the page background, which makes them
+   blend into the page. Give them their own, lighter surface.
+   --------------------------------------------------------- */
+[data-md-color-scheme="default"] {
+  --cdp-popup:        #eef3f3;
+  --cdp-popup-border: #b4c6c4;
+}
+
+[data-md-color-scheme="slate"] {
+  --cdp-popup:        #2d3b49;
+  --cdp-popup-border: #52687c;
+}
+
+.md-tooltip2 {
+  /* the popup body, its tail and its fading edges all use this variable */
+  --md-default-bg-color: var(--cdp-popup);
+}
+
+.md-tooltip2__inner {
+  border: 1px solid var(--cdp-popup-border);
+  border-radius: 0.4rem;
+  box-shadow: 0 0.6rem 2rem rgba(0, 0, 0, 0.35);
+}
+
+/* ---------------------------------------------------------
+   10. Accessibility
+   --------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset .grid.cards > ul > li,
+  .md-typeset .grid.cards > ol > li,
+  .md-typeset .tabbed-labels label[for] {
+    transition: none;
+  }
+
+  .md-typeset .grid.cards > ul > li:hover,
+  .md-typeset .grid.cards > ol > li:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 44.98em) {
+  .cdp-hero h1 {
+    font-size: 1.9rem;
+  }
 }

@@ -1,0 +1,9 @@
+# Build dependencies for the docs site. Used locally and by .github/workflows/ci.yaml
+#   pip install -r requirements.txt
+# Material for MkDocs is not compatible with MkDocs 2.x, so keep this below 2.
+mkdocs>=1.6,<2
+mkdocs-material>=9.7,<10
+mkdocs-glightbox
+# needed by Material's "social" and "optimize" plugins (image processing)
+pillow
+cairosvg

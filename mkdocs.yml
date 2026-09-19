@@ -1,67 +1,79 @@
 # https://squidfunk.github.io/mkdocs-material/reference/
-nav:
-
-  - Home: index.md
-
-#  - Buy Now: buy.md
-
-  - Setup:
-    - Release Notes: release_notes.md
-    - Installation: installation.md
-
-  - Quick Start: quick_start.md
-
-  - Docs:
-    - Importing: importing.md
-    - Caching: frame_cache.md
-    - Sub-Range Analysis: sub_range.md
-    - Detecting Cuts: detecting_cuts.md
-    - Overlay Player: overlay_player.md
-    - Modes: modes.md
-    - Shots Table: shots_table.md
-    - Spike Graph: spike_graph.md
-    - Contact Sheet: contact_sheet.md
-    - Manual Edits: manual_edits.md
-    - Exporting: exporting.md
-    - Shortcuts: shortcuts.md
-
-
-  - Integrations:
-      - Hiero: hiero_integration.md
-
 
 site_name: CutDetectorPro
-site_url: https://frueter.github.io/cutdetector-docs
+site_url: https://cutdetectorpro.com/
+site_description: Automatic cut detection for VFX shot prep. Detect cuts, fix them in seconds, read shot names off the burn-in with OCR, and export to editorial, reports, Flow Production Tracking or Hiero.
+copyright: Copyright &copy; 2026 Frank Rueter | OHUfx
+
+nav:
+  - Home: index.md
+
+#  - Buy Now: buy.md   # enable on product launch
+
+  - Get Started:
+    - Install & Activate: installation.md
+    - Quick Start: quick_start.md
+
+  - Guide:
+    - Import & Sessions: importing.md
+    - Detecting Cuts: detecting_cuts.md
+    - Sub-Range Analysis: sub_range.md
+    - Review & Fix Cuts: review.md
+    - Spike Graph: spike_graph.md
+    - Contact Sheet: contact_sheet.md
+    - Shots Table: shots_table.md
+    - Text Extraction (OCR): ocr.md
+    - Shot Playback: overlay_player.md
+    - Frame Cache: frame_cache.md
+    - Exporting: exporting.md
+
+  - Integrations:
+    - Hiero: hiero_integration.md
+
+  - Reference:
+    - Shortcuts: shortcuts.md
+    - FAQ & Troubleshooting: faq.md
+    - Release Notes: release_notes.md
+
 theme:
-  icon:
-    annotation: material/arrow-right-circle
   name: material
-  font:
-    text: Merriweather Sans
-    code: Red Hat Mono
   logo: assets/logo.png
   favicon: assets/favicon.ico
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    annotation: material/arrow-right-circle
   features:
-    - navigation.footer
-    - navigation.sections
     - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
     - content.tooltips
   palette:
+    # colours are defined in stylesheets/extra.css to match the app and logo
     # Dark Mode
     - scheme: slate
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
-        name: Dark Mode
-      primary: blue grey
-      accent: amber
+        name: Switch to light mode
 
     # Light Mode
     - scheme: default
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
-        name: Light Mode
-      primary: blue grey
-      accent: amber
+        name: Switch to dark mode
 
 markdown_extensions:
   - material.extensions.preview:
@@ -70,19 +82,20 @@ markdown_extensions:
             include:
               - spike_graph.md
               - contact_sheet.md
-              - manual_edits.md
+              - review.md
+              - ocr.md
               - importing.md
               - exporting.md
               - shots_table.md
               - hiero_integration.md
               - detecting_cuts.md
               - sub_range.md
+              - installation.md
 
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
-      linenums: true
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
@@ -93,13 +106,8 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-
   - pymdownx.tabbed:
       alternate_style: true
-
-  - attr_list
-  - abbr
-  - md_in_html
   - pymdownx.keys
   - pymdownx.caret
   - pymdownx.mark
@@ -108,22 +116,38 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.details
-  - admonition
+  - pymdownx.smartsymbols
   - attr_list
+  - abbr
+  - admonition
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+
+validation:
+  links:
+    not_found: warn
+  anchors: warn
 
 extra:
   social:
     - icon: fontawesome/brands/discord
-      link: https://discord.gg/3NBMJNbHaP
+      link: https://discord.gg/puzJUaQdxD
 
 extra_css:
   - stylesheets/extra.css
 
-extra_javascript:
-  - javascripts/accordion.js
-
 plugins:
-  - glightbox
   - search
-
-copyright: Copyright &copy; 2026 Frank Rueter | OHUfx
+  - glightbox
+  # The two plugins below need system libraries (cairo) and are slow, so they only run
+  # in CI (GitHub sets CI=true). Locally: `CI=true mkdocs build` to try them.
+  - social:
+      enabled: !ENV [CI, false]
+      cards_layout_options:
+        background_color: "#26394a"
+        color: "#ffffff"
+  - optimize:
+      enabled: !ENV [CI, false]

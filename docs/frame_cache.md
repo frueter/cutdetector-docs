@@ -1,23 +1,25 @@
 # Frame Cache
 
-![Image title](assets/cdui_cache_bar.gif)
+![The cache bar with the Pacman cache button](assets/cdui_cache_bar.gif)
 
-The global frame cache stores frames in memory at a maximum of 1024 wide and as compressed jpg bytes.
+Scrubbing through a video is only smooth if the frames are ready. The frame cache keeps them in memory so the whole UI feels snappy.
 
-This helps with a smoother UI experience while keeping the memory footprint somewhat small.
+## How it works
 
-The cache is shared between all areas in the UI that display frames, such as the [Contact Sheet](contact_sheet.md) and [Shots Table](shots_table.md) 
+- Frames are stored at up to 1024 pixels wide, as compressed jpg data, so the memory footprint stays small.
+- One cache is shared by everything that shows frames: the viewers, the [Contact Sheet](contact_sheet.md), the [Shots Table](shots_table.md) and the [Shot Playback](overlay_player.md).
+- Anything you do (scrubbing, playing a shot, opening the contact sheet) adds the frames it needs to the cache on demand.
 
-Actions such as scrubbing, using the [Overlay Player](overlay_player.md), displaying frames in the [Contact Sheet](contact_sheet.md) mode all update the cache on demand.
+## Fill it up front
 
-However, for best performance, hit that ghost, watch Pacman do his thing, and enjoy a smoother UI experience afterwards.
+For the smoothest experience, hit the ghost on the cache bar, watch Pacman do his thing, and enjoy a fast UI afterwards.
+
+!!! note "Cut analysis is not affected by the cache"
+
+    The cache only speeds up what you *see*. The detection itself always reads the video directly.
 
 ## Caching a sub-range
 
-If you have requested a [sub-range](sub_range.md) (in/out points), hitting the ghost only caches the frames of that range instead of the whole clip.
+If you have requested a [sub-range](sub_range.md) (in and out points), the ghost only caches the frames of that range instead of the whole clip.
 
-Changing the range never switches caching on by itself. But if caching is already on, changing the range makes CutDetectorPro cache any frames of the new range that are not cached yet.
-
-
-!!! note "Cut analysis is not affected by this."
-
+Changing the range never switches caching on by itself. But if caching is already on, CutDetectorPro caches any frames of the new range that aren't cached yet.

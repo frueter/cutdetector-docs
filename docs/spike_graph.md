@@ -1,60 +1,54 @@
 # Spike Graph
 
-![Image title](assets/cdui_spike_graph.gif)
+![The spike graph](assets/cdui_spike_graph.gif)
 
-## Visualising the analysis data
-Once the cut analysis is complete, the result is visualised as a spike graph where each frame in the clip is represented by a spike whos height 
-represents the statistical difference to the previous frame.
+## Reading the graph
 
+Once the analysis is done, every frame of the clip is a spike. The taller the spike, the more that frame differs from the one before it.
+Tall spikes are usually cuts.
 
-Clicking into the graph will change the preview frames above the graph. The frame under the playhead is shown on the right, the previous frame on the left.
+- **Click** anywhere in the graph to move the playhead. The frame under it shows in the right viewer, the previous frame in the left one.
+- The [Shots Table](shots_table.md) follows the playhead: it always selects the shot the playhead is on.
+- Cuts are drawn in teal, [manual additions](#editing-in-the-graph) in bright green and manual deletions in red.
 
-The selection in the [Shots Table](shots_table.md) is synced with the playhead position. The table will select the shot that the playhead is currently on.
+!!! info "Keys for moving around"
 
+    - ++left++ / ++right++ move the playhead one frame at a time *(Preview Mode only)*. After analysis they stay inside the analysed [sub-range](sub_range.md).
+    - ++page-up++ / ++page-down++ and ++up++ / ++down++ jump between cuts (table rows). On the first or last shot nothing happens.
+    - ++alt++ + click & drag paint-selects spikes for editing.
 
-!!! info "Use hotkeys to navigate frames and cut points:"
+    All of them are also on the [Shortcuts](shortcuts.md) page.
 
-    ++left++ and ++right++ to move the playhead frame by frame ==this only works in *preview* mode==. After analysis, the playhead stays within the analysed [sub-range](sub_range.md).
+## The threshold
 
-    
-    ++page-up++ and ++page-down++ to jump between cut points (table rows) ==this works in both *graph* and *contact sheet* mode==
+![The threshold line](assets/cdui_threshold.png){ align=right }
 
-    ++up++ and ++down++ to jump between cut points (table rows). On the first or last shot, nothing happens.
+The yellow threshold line decides which spikes count as cuts. Every spike above it turns teal and gets a row in the [Shots Table](shots_table.md).
+Drag the line up and down until the number of cuts looks right. Nothing is lost when you move it, and your manual edits are kept.
 
-    ++alt++ + `click&drag` to paint-select spikes for manual editing
+<!-- MEDIA: 6 s loop: drag the threshold line up and down while the cut count in the status bar changes. -->
 
-This makes it easy to step through the current cut points and check their validity.
+## Editing in the graph
 
-## Interacting with the data
-The user can interact with the data in the following ways:
+=== ":octicons-thumbsup-24: Adding cuts"
 
-=== ":octicons-diff-24: Threshold"
-    ![Image title](assets/cdui_threshold.png){ align=left }
+    ![Adding cuts in the graph](assets/cdui_whitelist.gif){ align=left }
 
-    The taller a spike, the bigger its statistical difference to the previous frame.
+    Added cuts are **whitelisted**: they stay cuts no matter where the threshold is. They're drawn as bright green spikes.
 
-    The yellow threshold bar can be used to define which spikes will be interpreted as actual cut points (teal coloured).
+    - Click the spike where the new shot starts (use the arrow keys to step frame by frame), then press ++c++ (as in **C**ut).
+    - Or hold ++alt++ and click & drag over one or more spikes, then press ++a++ (as in **A**dd).
 
-    Spikes above the threshold will be listed in the [Shots Table](shots_table.md), as well as manually added cut points.
+=== ":octicons-thumbsdown-24: Removing cuts"
 
-=== ":octicons-thumbsup-24: Adding Cuts"
-    ![Image title](assets/cdui_whitelist.gif){ align=left }
+    ![Removing cuts in the graph](assets/cdui_blacklist.gif){ align=left }
 
-    For more control cut points can be added manually. Manually added cut points are whitelisted, so that subsequent threshold changed will have on effect on them.
-    These edits will draw as bright green spikes.
+    Removed cuts are **blacklisted**: they never come back, whatever you do with the threshold. They're drawn as bright red spikes.
 
-    - Jump to the frame that should be a cut point by clicking on the respective spike (use arrow keys to navigate frame by frame),
-        then press ++c++ (to `C` ut)
-    - Holding ++alt++ and click+dragging the mouse over the spike(s) that should be interpreted as cut points and press ++a++ (to `A`dd a cut point)
+    - Move to the cut you don't want (use ++page-up++ / ++page-down++ to go from cut to cut), then press ++delete++ or ++backspace++.
+    - Or hold ++alt++ and click & drag over one or more spikes, then press ++d++ (as in **D**elete).
 
-=== ":octicons-thumbsdown-24: Removing Cuts"
-    ![Image title](assets/cdui_blacklist.gif){ align=left }
+!!! tip "Missing a cut?"
 
-    False positives can be removed in the same way. Manually removed cut points are blacklisted, so that subsequent threshold changed will have on effect on them.
-    These edits will draw as bright red spikes.
-
-    - Jump to the frame that should never be a cut point by clicking on the respective frame (use ++page-up++/page-down++ keys to navigate cut by cut),
-        then press ++delete++ or ++backspace++
-    - Holding ++alt++ and click+dragging the mouse over the spike(s) that should be removed as cut points and press ++d++ (to `D` elete the cut point)
-
-!!! tip "To find and add missing cut points, I recommend using the Contact Sheet view instead by clicking on ["Find Missing Cuts..."](contact_sheet.md) or pressing ++grave++"
+    The best way to find and add missing cuts is the [Contact Sheet](contact_sheet.md): click **Find Missing Cuts** or press ++grave++.
+    You see the actual frames, not just spikes.
