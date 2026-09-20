@@ -52,6 +52,8 @@ Got a burn-in that changes with every shot? Analysing just the burn-in is often 
 2. A purple outline shows the area. Only that area is analysed.
 3. Right-click to delete the rectangle again.
 
+The rectangle always stays on the picture: if you start dragging outside of the image, it's trimmed to the image edge, and if the drag never reaches the image the rectangle is removed.
+
 <!-- MEDIA: 6 s loop: ctrl-drag a rectangle over a burn-in, press Enter. -->
 
 !!! info "This is different from a sub-range"

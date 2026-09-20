@@ -46,6 +46,7 @@ Ordered by how much a potential buyer will notice. Tick them off as you go.
 - [ ] **Contact Sheet** (`contact_sheet.md`). 8 s: scroll a shot, click the first frame of the hidden new shot, press C, a green row appears in the table.
 - [ ] **Text extraction** (`ocr.md`). The existing `cdui_ocr.gif` works, but consider an mp4.
 - [ ] **Shot Playback** (`overlay_player.md`). The existing gif works.
+- [ ] **Sorting the table** (`shots_table.md`). 6 s: click the Duration header, click again, click a third time to go back to time order. Show the little sort arrow.
 - [ ] **Export Manager** (`exporting.md`). 8 s: tick Flagged Only, "one file per Sequence", otio + pdf, Export.
 - [ ] **Hiero** (`hiero_integration.md`). Two 10 s clips: 1) right-click a bin item, Cut Detector, Apply, a sequence appears. 2) right-click a track item on the timeline, Apply, the item is razored into named shots.
 
@@ -64,7 +65,7 @@ Ordered by how much a potential buyer will notice. Tick them off as you go.
 ## Open questions and TODOs
 
 - [ ] **Tesseract languages (later).** The docs say text extraction reads English. The OCR call passes no `-l` language (`image_to_string(gray, config='--oem 3 --psm 6')`), and `TESSDATA_PREFIX` only says where language data lives, not which language to use. Revisit when the app can select a language, then document it in `installation.md`, `ocr.md` and `faq.md`.
-- [ ] **Bundled tools on Windows and Linux.** Your commit messages say only the macOS arm64 bundling was run. The docs say ffmpeg and Tesseract ship on macOS, Windows and Linux (as listed in `installation.md`). Re-check that list after you have built and tested those platforms.
+- [ ] **Bundled tools: platform list.** You have built successfully on Windows and Linux, and the docs list where ffmpeg and Tesseract ship (`installation.md`). Still open in the app: the Linux build hasn't been rebuilt with `build.py` since the licence review, Intel macOS and macOS 13/14 have no bundled Tesseract, and macOS is not notarised. Update the list if any of that changes.
 - [ ] **Tested video formats** (`importing.md`, `TODO(frank)`). The docs say it opens what PySceneDetect/OpenCV can decode. Name the codecs you have verified, such as ProRes, DNxHD or MXF.
 - [ ] **"Best value" label on the pricing page.** The middle card (Team 1) is highlighted by the CSS, but there's no label saying why. Decide whether it should say "Most popular" or similar.
 - [ ] **Enable the pricing page at launch.** Uncomment `- Buy Now: buy.md` in `mkdocs.yml`. Also change the two "Download the free beta" buttons on the home page if the beta ends.

@@ -22,6 +22,16 @@ CutDetectorPro reads that area for every shot and fills the column.
 
 Don't have a column yet? [Add one](shots_table.md#add-your-own-columns) first.
 
+!!! tip "The rectangle stays on the picture"
+
+    If you start dragging outside of the image, the rectangle is trimmed to the image edge. If the drag never reaches the image, the rectangle is removed again.
+
+??? question "What if it says \"Tesseract not found\"?"
+
+    Clicking the :octicons-gear-24: icon shows a **Tesseract not found** message when CutDetectorPro can't find Tesseract.
+    Install it and select it in **Preferences**, or set `CDUI_TESSERACT_PATH`. See [Install & Activate](installation.md#3-tesseract-and-ffmpeg).
+    If a cell shows `[ERROR: tesseract not found]` or `[ERROR: tesseract failed]` instead of text, the same applies.
+
 ## Clean up the text
 
 OCR isn't perfect. In the recording above, for example, an "S" sometimes came through as a "$".
@@ -38,7 +48,7 @@ Right-click a column header and choose **Search&Replace**.
 ### Split a column into new ones
 
 Say your "Shot Name" column holds values like `S01_010`, and you also want a "Sequence" column with just `S01`.
-Right-click the header and choose **Extract Additional Column**.
+Right-click the **Shot Name** header and choose **Extract Additional Column**. The new column needs a [unique name](shots_table.md#add-your-own-columns).
 
 ![The column header menu with Extract Additional Column](assets/cdui_table_header_menu2.png){ width=600px }
 

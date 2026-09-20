@@ -68,6 +68,7 @@ When you do, please include your support info. See [Getting help](#getting-help)
 
     Text extraction needs [Tesseract](installation.md#3-tesseract-and-ffmpeg), which comes with the app on most systems.
     Open **Help → About CutDetectorPro → Environment** to see whether CutDetectorPro found one and where it's from.
+    If it can't find one, clicking a column's :octicons-gear-24: icon shows a **Tesseract not found** message.
     If it didn't (on Intel Macs, older macOS versions and ARM Windows or Linux, for example), [install Tesseract](installation.md#tesseract-text-extraction) yourself,
     or point **Preferences** to the executable.
 
@@ -84,6 +85,10 @@ When you do, please include your support info. See [Getting help](#getting-help)
     You need an activated license. Sub-clip export also needs [ffmpeg](installation.md#3-tesseract-and-ffmpeg), which comes with the app on most systems.
     **Help → About CutDetectorPro → Environment** shows whether one was found.
 
+??? question "Does sorting the table change the export order?"
+
+    No. You can [sort the Shots Table](shots_table.md#sort-the-table) freely, but exports and saved sessions always use the shots in time order.
+
 ??? question "How do I export only some of the shots?"
 
     Tick the :material-flag: **Flag** checkbox on those shots, then use the [Export Manager](exporting.md) with *Flagged Only*.
@@ -98,9 +103,12 @@ When you do, please include your support info. See [Getting help](#getting-help)
 
 ??? question "What should I send when I report a problem?"
 
-    Open **Help → About CutDetectorPro** and click **Copy Support Info**. It copies your app, Python, Qt and system versions, your license status,
-    which ffmpeg and Tesseract are in use (and how they were found), and where the log and settings live. Paste it into your message on
-    [Discord :fontawesome-brands-discord:](https://discord.gg/puzJUaQdxD) or into the **Help → Report Issues...** dialog.
+    Use **Help → Report Issues...** and tick **Include log files and system info**. The report then carries your recent session logs and a `system_info.txt`:
+    your app, Python, Qt and system versions, your license status, which ffmpeg and Tesseract are in use (and how they were found),
+    the relevant environment variables and where the log and settings live.
+
+    Prefer to ask on [Discord :fontawesome-brands-discord:](https://discord.gg/puzJUaQdxD)? Open **Help → About CutDetectorPro**, click **Copy Support Info**
+    and paste it into your message. It's the same text.
 
 ??? question "Which open-source software does CutDetectorPro use?"
 

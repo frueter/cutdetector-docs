@@ -12,11 +12,19 @@
 
 :material-puzzle-plus: New **Help → About CutDetectorPro** dialog: license status, credits, which ffmpeg and Tesseract are in use (path, how they were found, version), system info and a **Copy Support Info** button for bug reports
 
+:material-puzzle-plus: The Shots Table can now be sorted by clicking a column header: ascending, descending, then back to time order. Exports and saved sessions always stay in time order. See [Shots Table](shots_table.md#sort-the-table)
+
 :simple-renovate: The app looks for ffmpeg and Tesseract in this order: environment variable, **Preferences**, the copy that ships with the app, then your system
 
 :simple-renovate: Exporting sub-clips now uses exactly the ffmpeg CutDetectorPro found (previously it could pick up a different one on your `PATH`)
 
 :simple-renovate: The license texts of the app and of the bundled third-party software now ship with the app in a `licenses` folder, linked from the About dialog
+
+:simple-renovate: Column names in the Shots Table must now be unique (ignoring case, also against the built-in columns). CutDetectorPro explains why when a name is refused, and the + button suggests a free one
+
+:simple-renovate: **Help → Report Issues...** can now attach your system info (versions, operating system, which ffmpeg and Tesseract are in use) along with the logs
+
+:simple-renovate: A clear **Tesseract not found** message when text extraction can't find Tesseract, instead of a silent failure
 
 :simple-renovate: Hiero: each CutDetectorPro window now sends its results back to the item it was launched from, so multiple sessions can run side by side
 
@@ -31,6 +39,16 @@
 :fontawesome-solid-bug-slash: Fixed page-up/page-down selecting beyond the first and last shot
 
 :fontawesome-solid-bug-slash: Fixed clicking and dragging in the spike graph landing on the wrong frame
+
+:fontawesome-solid-bug-slash: Fixed errors when the Ctrl/Cmd-drag rectangle started outside of the image. The rectangle now stays on the picture
+
+:fontawesome-solid-bug-slash: Fixed the text extraction (gear) icons in the table header. They stay put when you scroll or resize the table, and hide when their column is mostly out of view
+
+:fontawesome-solid-bug-slash: Fixed deleting a column. The remaining gear icons kept pointing at the wrong columns, and saving the session could skip one
+
+:fontawesome-solid-bug-slash: Fixed the gear icon's tooltip showing the old name after renaming a column
+
+:fontawesome-solid-bug-slash: Fixed a crash that could happen when closing the app
 
 ---
 

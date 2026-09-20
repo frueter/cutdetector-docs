@@ -30,6 +30,8 @@ Every keyboard shortcut in one place. On macOS, read ++ctrl++ as ++cmd++.
 | ++page-up++ / ++up++ | Select the previous shot. Does nothing on the first shot. |
 | ++alt++ + click a table row | Jump to that frame and switch to the contact sheet |
 
+These keys follow the clip's time order, even while the [Shots Table is sorted](shots_table.md#sort-the-table) by another column.
+
 ## Preview Mode
 
 | Shortcut | Function |
