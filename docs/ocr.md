@@ -3,9 +3,10 @@
 Burn-ins hold gold: shot names, source timecodes, version numbers, VFX notes. CutDetectorPro can read them for you and put the text in your [Shots Table](shots_table.md), one row per shot.
 Then you can clean it up until it matches your pipeline's naming.
 
-!!! info "Needs Tesseract"
+!!! info "Powered by Tesseract"
 
-    Text extraction uses the free [Tesseract](installation.md#tesseract-text-extraction) engine. Install it once and CutDetectorPro finds it automatically.
+    Text extraction uses the free [Tesseract](installation.md#tesseract-text-extraction) engine, which [comes with CutDetectorPro](installation.md#3-tesseract-and-ffmpeg) on most systems.
+    It reads **English** text. On other systems, install Tesseract and CutDetectorPro finds it automatically.
 
 ## Extract text from the image
 

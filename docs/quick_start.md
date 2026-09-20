@@ -62,7 +62,7 @@ Click the first frame of the new shot and press ++c++ to cut. Use the sliders to
 Got a burn-in with shot names, timecodes or notes? In [Preview Mode](review.md), hold ++ctrl++ (++cmd++ on macOS) and drag a box around the text.
 Then click the :octicons-gear-24: icon in the header of the [Shots Table](shots_table.md) column that should receive it.
 
-This needs [Tesseract](installation.md#tesseract-text-extraction). See [Text Extraction](ocr.md) for the details.
+Tesseract, the text engine, [comes with the app](installation.md#3-tesseract-and-ffmpeg) on most systems. See [Text Extraction](ocr.md) for the details.
 
 ## 7. Export
 

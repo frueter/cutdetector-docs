@@ -52,21 +52,36 @@ To unlock everything, activate a license key. The beta license is free, so join 
     Only occasionally. CutDetectorPro re-checks your license online about once a week.
     If you're offline when that happens, it keeps working for up to **14 days** and shows you how many are left.
 
-## 3. Optional extras
+## 3. Tesseract and ffmpeg
 
-You can do all of the cut detection, reviewing and most exporting without installing anything else.
-Two features rely on free third-party tools:
+Two features rely on free third-party tools. **Both come with CutDetectorPro on most systems**, so you normally don't have to install anything:
 
-| Tool | You need it for | Without it |
-|------|-----------------|------------|
-| [Tesseract](#tesseract-text-extraction) | [Text extraction (OCR)](ocr.md) from burn-ins | Everything else works, text extraction is unavailable |
-| [ffmpeg](#ffmpeg-clip-export) | Exporting mp4 [sub-clips](exporting.md) per shot | The clip export options are greyed out |
+| Tool | Used for | Included with the app on |
+|------|----------|--------------------------|
+| Tesseract (English) | [Text extraction (OCR)](ocr.md) from burn-ins | macOS (Apple Silicon, macOS 15 or later), Windows (64-bit), Linux (x86_64) |
+| ffmpeg | Exporting mp4 [sub-clips](exporting.md) per shot | macOS (Apple Silicon and Intel), Windows (64-bit), Linux (x86_64 and ARM) |
 
-CutDetectorPro looks for both automatically. If it can't find one, it asks you to point it to the executable. You can also set both paths at any time in **Preferences**.
+On any other system, [install Tesseract](#tesseract-text-extraction) and/or [ffmpeg](#ffmpeg-clip-export) yourself.
+Without them, everything else still works: text extraction is unavailable and the clip export options are greyed out.
+
+### Which copy does the app use?
+
+CutDetectorPro looks for each tool in this order, and uses the first one it finds:
+
+1. The path in the environment variable `CDUI_TESSERACT_PATH` or `CDUI_FFMPEG_PATH`
+2. The path you set in **Preferences**
+3. The copy that ships with the app
+4. One installed on your system (on your `PATH`, or in the usual install folders)
+
+So if you'd rather use your own build, point **Preferences** at it and it takes priority over the bundled one.
+To see exactly which one is in use, open **Help → About CutDetectorPro → Environment**. It shows the path, how it was found and its version.
+
+<!-- MEDIA (about dialog): screenshot of Help > About CutDetectorPro > Environment tab, and of the Preferences dialog with the two paths. -->
 
 ### Tesseract (text extraction)
 
 [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html){ target=_blank rel="noopener noreferrer" } is an open-source tool that reads text from images.
+You only need to install it yourself on systems where it isn't [included](#3-tesseract-and-ffmpeg), or to use your own copy.
 
 === ":fontawesome-brands-windows: Windows"
 
@@ -101,17 +116,15 @@ CutDetectorPro looks for both automatically. If it can't find one, it asks you t
     tesseract --version
     ```
 
-??? tip "Other languages"
+??? info "Which languages can it read?"
 
-    Tesseract reads English out of the box. For other languages, install the matching language pack,
-    e.g. `sudo apt install tesseract-ocr-deu` for German, or download the trained data files from
-    the [tessdata repository](https://github.com/tesseract-ocr/tessdata){ target=_blank rel="noopener noreferrer" }.
-    The Windows installer lets you choose languages during setup.
+    Text extraction reads **English**. The Tesseract that ships with the app contains English language data only.
 
 ### ffmpeg (clip export)
 
 [ffmpeg](https://ffmpeg.org/download.html){ target=_blank rel="noopener noreferrer" } is the standard tool for converting and cutting video.
 CutDetectorPro uses it to write one mp4 sub-clip per shot.
+You only need to install it yourself on systems where it isn't [included](#3-tesseract-and-ffmpeg), or to use your own copy.
 
 === ":fontawesome-brands-windows: Windows"
 

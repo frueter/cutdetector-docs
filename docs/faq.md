@@ -1,6 +1,7 @@
 # FAQ & Troubleshooting
 
 Quick answers to the things people ask most. Not here? Ask on [Discord :fontawesome-brands-discord:](https://discord.gg/puzJUaQdxD) or use **Help → Report Issues...** in the app.
+When you do, please include your support info. See [Getting help](#getting-help).
 
 ## Getting started
 
@@ -65,19 +66,23 @@ Quick answers to the things people ask most. Not here? Ask on [Discord :fontawes
 
 ??? question "Text extraction doesn't work"
 
-    It needs [Tesseract](installation.md#tesseract-text-extraction). Install it, and if CutDetectorPro can't find it, point it to the executable when asked.
+    Text extraction needs [Tesseract](installation.md#3-tesseract-and-ffmpeg), which comes with the app on most systems.
+    Open **Help → About CutDetectorPro → Environment** to see whether CutDetectorPro found one and where it's from.
+    If it didn't (on Intel Macs, older macOS versions and ARM Windows or Linux, for example), [install Tesseract](installation.md#tesseract-text-extraction) yourself,
+    or point **Preferences** to the executable.
 
 ??? question "The text has mistakes"
 
     - Draw the rectangle tighter around the text.
     - Fix repeating mistakes (an "S" read as "$", say) with [Search & Replace](ocr.md#search-replace).
-    - For other languages, install the [Tesseract language pack](installation.md#tesseract-text-extraction).
+    - Text extraction reads English. Text in other languages will come out with mistakes.
 
 ## Exporting
 
 ??? question "The export options are greyed out"
 
-    You need an activated license. Sub-clip export also needs [ffmpeg](installation.md#ffmpeg-clip-export).
+    You need an activated license. Sub-clip export also needs [ffmpeg](installation.md#3-tesseract-and-ffmpeg), which comes with the app on most systems.
+    **Help → About CutDetectorPro → Environment** shows whether one was found.
 
 ??? question "How do I export only some of the shots?"
 
@@ -88,3 +93,16 @@ Quick answers to the things people ask most. Not here? Ask on [Discord :fontawes
 ??? question "Scrubbing is slow"
 
     Fill the [frame cache](frame_cache.md): hit the ghost and let Pacman finish.
+
+## Getting help
+
+??? question "What should I send when I report a problem?"
+
+    Open **Help → About CutDetectorPro** and click **Copy Support Info**. It copies your app, Python, Qt and system versions, your license status,
+    which ffmpeg and Tesseract are in use (and how they were found), and where the log and settings live. Paste it into your message on
+    [Discord :fontawesome-brands-discord:](https://discord.gg/puzJUaQdxD) or into the **Help → Report Issues...** dialog.
+
+??? question "Which open-source software does CutDetectorPro use?"
+
+    The **Credits** tab of **Help → About CutDetectorPro** lists every third-party project with its developers, license and version.
+    The license texts, including those of the bundled ffmpeg and Tesseract, also ship with the app in a `licenses` folder, and the About dialog links to it.

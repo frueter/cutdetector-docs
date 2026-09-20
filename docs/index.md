@@ -227,8 +227,8 @@ That's hours of scrubbing, and one missed cut can ripple through the whole sched
 
 ??? question "Do I need to install anything else?"
 
-    Only if you use two optional features. [Tesseract](installation.md#tesseract-text-extraction) is needed for text extraction (OCR),
-    and [ffmpeg](installation.md#ffmpeg-clip-export) is needed to export sub-clips. Cut detection, review and all other exports work without either.
+    On most systems, no. Tesseract (for text extraction) and ffmpeg (for exporting sub-clips) come with the app.
+    On the few systems they don't, you can [install them yourself](installation.md#3-tesseract-and-ffmpeg). Cut detection, review and all other exports never need either.
 
 ??? question "Do I have to re-analyse a clip every time I open it?"
 

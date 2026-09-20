@@ -52,6 +52,7 @@ Ordered by how much a potential buyer will notice. Tick them off as you go.
 ### Install page
 
 - [ ] **Activation** (`installation.md`). Screenshots (or a 10 s recording) of the **Activate CutDetectorPro** dialog and the success dialog.
+- [ ] **About dialog and Preferences** (`installation.md`). Screenshot of **Help → About CutDetectorPro → Environment** (shows the bundled ffmpeg/Tesseract, how they were found) and of the Preferences dialog with the two tool paths. The FAQ's "Getting help" section also refers to the **Copy Support Info** button.
 - [ ] **Demo mode** (`installation.md`, optional). Screenshot of the orange **UNLICENSED** bar in the status bar. It would make a good visual for the "try it free" message.
 
 ### Housekeeping for existing assets
@@ -62,6 +63,8 @@ Ordered by how much a potential buyer will notice. Tick them off as you go.
 
 ## Open questions and TODOs
 
+- [ ] **Tesseract languages (later).** The docs say text extraction reads English. The OCR call passes no `-l` language (`image_to_string(gray, config='--oem 3 --psm 6')`), and `TESSDATA_PREFIX` only says where language data lives, not which language to use. Revisit when the app can select a language, then document it in `installation.md`, `ocr.md` and `faq.md`.
+- [ ] **Bundled tools on Windows and Linux.** Your commit messages say only the macOS arm64 bundling was run. The docs say ffmpeg and Tesseract ship on macOS, Windows and Linux (as listed in `installation.md`). Re-check that list after you have built and tested those platforms.
 - [ ] **Tested video formats** (`importing.md`, `TODO(frank)`). The docs say it opens what PySceneDetect/OpenCV can decode. Name the codecs you have verified, such as ProRes, DNxHD or MXF.
 - [ ] **"Best value" label on the pricing page.** The middle card (Team 1) is highlighted by the CSS, but there's no label saying why. Decide whether it should say "Most popular" or similar.
 - [ ] **Enable the pricing page at launch.** Uncomment `- Buy Now: buy.md` in `mkdocs.yml`. Also change the two "Download the free beta" buttons on the home page if the beta ends.

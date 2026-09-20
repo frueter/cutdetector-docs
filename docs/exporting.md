@@ -67,7 +67,7 @@ The [Shots Table](shots_table.md) is your cut list. Exporting turns it into what
 
     ![Media exports](assets/cdui_export_media.png){ width=300px }
 
-    !!! note "Sub-clips need [ffmpeg](installation.md#ffmpeg-clip-export)"
+    !!! note "Sub-clips use [ffmpeg](installation.md#3-tesseract-and-ffmpeg), which comes with the app on most systems"
 
 - :material-clipboard:{ .lg .middle } **Clipboard**
 

@@ -6,6 +6,18 @@
 
 :material-puzzle-plus: Hiero: when launched from a bin item, the clip's in/out points are used as a [sub-range](sub_range.md)
 
+:material-puzzle-plus: ffmpeg now ships with the app (a GPL build with libx264), so exporting sub-clips works without installing anything. See [Install & Activate](installation.md#3-tesseract-and-ffmpeg)
+
+:material-puzzle-plus: Tesseract (with English language data) now ships with the app on macOS (Apple Silicon, macOS 15+), Windows (64-bit) and Linux (x86_64), so text extraction works without installing anything. Other systems keep using an installed Tesseract
+
+:material-puzzle-plus: New **Help → About CutDetectorPro** dialog: license status, credits, which ffmpeg and Tesseract are in use (path, how they were found, version), system info and a **Copy Support Info** button for bug reports
+
+:simple-renovate: The app looks for ffmpeg and Tesseract in this order: environment variable, **Preferences**, the copy that ships with the app, then your system
+
+:simple-renovate: Exporting sub-clips now uses exactly the ffmpeg CutDetectorPro found (previously it could pick up a different one on your `PATH`)
+
+:simple-renovate: The license texts of the app and of the bundled third-party software now ship with the app in a `licenses` folder, linked from the About dialog
+
 :simple-renovate: Hiero: each CutDetectorPro window now sends its results back to the item it was launched from, so multiple sessions can run side by side
 
 :simple-renovate: Caching now respects the requested sub-range. Changing the range no longer starts caching by itself, but new frames of the range get cached if caching is already on
