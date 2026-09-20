@@ -26,7 +26,7 @@ reads shot names straight off the burn-in, and hands you a clean shot list.
 
 <div class="cdp-cta" markdown>
 
-[:material-download: Download the free beta](https://www.dropbox.com/scl/fo/5v9ekfemn8emglbqad464/AJE6tCLfrTumMXe8mzH65ak?rlkey=sjm60bjkltwsuzqkssxa06yc5&st=4hqtsdg7&dl=0){ .md-button .md-button--primary }
+[:material-download: Get early access for free](https://ohufx.lemonsqueezy.com/checkout/buy/b048f604-4b92-4733-ba28-ee2b2c9bc13b){ .md-button .md-button--primary }
 [:material-rocket-launch: 5-minute quick start](quick_start.md){ .md-button }
 
 </div>
@@ -250,11 +250,11 @@ That's hours of scrubbing, and one missed cut can ripple through the whole sched
 
 ## Ready to stop scrubbing?
 
-Download the beta, drop in a clip and press ++enter++.
+Download the app, drop in a clip and press ++enter++.
 
 <div class="cdp-cta" markdown>
 
-[:material-download: Download the free beta](https://www.dropbox.com/scl/fo/5v9ekfemn8emglbqad464/AJE6tCLfrTumMXe8mzH65ak?rlkey=sjm60bjkltwsuzqkssxa06yc5&st=4hqtsdg7&dl=0){ .md-button .md-button--primary }
+[:material-download: Get early access for free](https://ohufx.lemonsqueezy.com/checkout/buy/b048f604-4b92-4733-ba28-ee2b2c9bc13b){ .md-button .md-button--primary }
 [:fontawesome-brands-discord: Join us on Discord](https://discord.gg/puzJUaQdxD){ .md-button }
 
 </div>
