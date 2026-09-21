@@ -26,7 +26,7 @@ reads shot names straight off the burn-in, and hands you a clean shot list.
 
 <div class="cdp-cta" markdown>
 
-[:material-download: Get early access for free](https://ohufx.lemonsqueezy.com/checkout/buy/b048f604-4b92-4733-ba28-ee2b2c9bc13b){ .md-button .md-button--primary }
+[:material-download: Get early access for free](https://ohufx.lemonsqueezy.com/checkout/buy/acd70c90-9ca0-4ebf-9dc3-5a93a86fdb08){ .md-button .md-button--primary }
 [:material-rocket-launch: 5-minute quick start](quick_start.md){ .md-button }
 
 </div>
@@ -254,7 +254,7 @@ Download the app, drop in a clip and press ++enter++.
 
 <div class="cdp-cta" markdown>
 
-[:material-download: Get early access for free](https://ohufx.lemonsqueezy.com/checkout/buy/b048f604-4b92-4733-ba28-ee2b2c9bc13b){ .md-button .md-button--primary }
+[:material-download: Get early access for free](https://ohufx.lemonsqueezy.com/checkout/buy/acd70c90-9ca0-4ebf-9dc3-5a93a86fdb08){ .md-button .md-button--primary }
 [:fontawesome-brands-discord: Join us on Discord](https://discord.gg/puzJUaQdxD){ .md-button }
 
 </div>
