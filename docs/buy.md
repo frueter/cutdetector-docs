@@ -35,11 +35,11 @@ The only difference is how many machines you can activate.
 
     US$29.50 per activation
 
-    <a href="https://ohufx.lemonsqueezy.com/checkout/buy/bc83759c-86a5-4a98-a0da-f7ed8e1c6212?embed=1" class="lemonsqueezy-button md-button">
+    <a href="https://ohufx.lemonsqueezy.com/checkout/buy/1bf47ec9-6088-4114-81e0-3f6c69b201d6?embed=1" class="lemonsqueezy-button md-button">
     :material-cart-outline: Buy Now
     </a>
 
-- ### Team 1
+- ### Boutique
 
     **US$99**
 
@@ -52,11 +52,11 @@ The only difference is how many machines you can activate.
     *US$24.75 per activation*
 
 
-    <a href="https://ohufx.lemonsqueezy.com/checkout/buy/58a48d95-9fc1-4c1a-af15-0f91c7503fda?embed=1" class="lemonsqueezy-button md-button">
+    <a href="https://ohufx.lemonsqueezy.com/checkout/buy/dfa42941-23fd-4fa7-8768-423dcd7bd412?embed=1" class="lemonsqueezy-button md-button">
     :material-cart-outline: Buy Now
     </a>
 
-- ### Team 2
+- ### Studio
 
     **US$149**
 
@@ -68,7 +68,7 @@ The only difference is how many machines you can activate.
 
     *US$18.62 per activation*
 
-    <a href="https://ohufx.lemonsqueezy.com/checkout/buy/a7e0b157-93c9-4871-a0a1-761e01484111?embed=1" class="lemonsqueezy-button md-button">
+    <a href="https://ohufx.lemonsqueezy.com/checkout/buy/3515f957-c68b-4453-ac8e-890f80ebac77?embed=1" class="lemonsqueezy-button md-button">
     :material-cart-outline: Buy Now
     </a>
 
