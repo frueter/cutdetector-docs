@@ -14,10 +14,23 @@ Tall spikes are usually cuts.
 !!! info "Keys for moving around"
 
     - ++left++ / ++right++ move the playhead one frame at a time *(Preview Mode only)*. After analysis they stay inside the analysed [sub-range](sub_range.md).
+    - ++home++ / ++end++ jump straight to the first / last frame, same sub-range limit as above.
     - ++page-up++ / ++page-down++ and ++up++ / ++down++ jump between cuts (table rows). On the first or last shot nothing happens.
     - ++alt++ + click & drag paint-selects spikes for editing.
 
     All of them are also on the [Shortcuts](shortcuts.md) page.
+
+## Zooming in
+
+Use the zoom slider below the graph (next to the magnifying-glass icon) to see more detail. Zoom is centred on the current frame, so the playhead stays put as the window grows or shrinks around it.
+
+- **Drag the slider** to zoom in and out. Click the icon, or ctrl+click the slider, to reset.
+- **Scroll** over the graph to zoom with the mouse wheel, same centring as the slider.
+- **Middle-click and drag** to draw a region and zoom straight to it. A plain middle-click with no drag resets the zoom, same as the icon.
+
+The icon tints orange while the graph is zoomed, same as the brightness/scale icons in the [Contact Sheet](contact_sheet.md).
+
+<!-- MEDIA: 6 s loop: drag the zoom slider in, scroll to zoom back out, middle-click-drag a region to zoom straight into it. -->
 
 ## The threshold
 

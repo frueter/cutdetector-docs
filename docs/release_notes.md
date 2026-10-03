@@ -1,6 +1,23 @@
 # Release Notes
 :material-puzzle-plus: New Feature  :fontawesome-solid-bug-slash: Bug Fix  :simple-renovate: Improvements
 
+## v0.5.2 (beta)
+:material-puzzle-plus: The shots graph can now be zoomed: drag the zoom slider below the graph, scroll to zoom with the mouse wheel, or middle-click and drag to zoom straight into a region. See [Spike Graph](spike_graph.md#zooming-in)
+
+:material-puzzle-plus: Home/End keys jump to the first/last frame. See [Shortcuts](shortcuts.md)
+
+:simple-renovate: The shots graph renders faster on long clips, especially when zoomed in
+
+:fontawesome-solid-bug-slash: Fixed the Shots Table sometimes staying hidden, or not restoring its saved size, when the app reopened
+
+:fontawesome-solid-bug-slash: Fixed a crash when extracting text from, or renaming, a column while the table was sorted
+
+:fontawesome-solid-bug-slash: Fixed some icons (gear, brightness) failing to load on macOS
+
+:fontawesome-solid-bug-slash: Fixed the Hiero plugin not loading in Nuke 15 and earlier
+
+---
+
 ## v0.5.1 (beta)
 :material-puzzle-plus: Hiero: CutDetectorPro can now be launched from a track item in the timeline. The range used by the track item is analysed and the track item is cut up in place. See [Hiero](hiero_integration.md)
 

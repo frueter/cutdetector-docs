@@ -37,6 +37,7 @@ These keys follow the clip's time order, even while the [Shots Table is sorted](
 | Shortcut | Function |
 |----------|----------|
 | ++left++ / ++right++ | Move the playhead one frame back / forward (stays inside the analysed [sub-range](sub_range.md)) |
+| ++home++ / ++end++ | Jump to the first / last frame (stays inside the analysed [sub-range](sub_range.md)) |
 | ++ctrl++ + click & drag | Draw a rectangle for [text extraction](ocr.md) |
 
 ## Contact Sheet
@@ -58,6 +59,9 @@ These keys follow the clip's time order, even while the [Shots Table is sorted](
 | ++a++ | Add the selected spikes as cuts |
 | ++d++ | Delete the selected spikes, so they are never treated as cuts |
 | ++escape++ | Clear the spike selection |
+| scroll wheel | Zoom in / out, centred on the current frame |
+| middle-click & drag | Draw a region to zoom straight into |
+| middle-click (no drag) | Reset the zoom |
 
 ## Shot Playback
 
