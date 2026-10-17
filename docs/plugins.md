@@ -12,19 +12,50 @@ CutDetectorPro always runs as its own process; nothing of it loads into the host
 
 ## Supported hosts
 
-| Host | Launched from | **Send to...** does |
-|---|---|---|
-| [Nuke](#nuke) | a Read node | a `TimeClip` per shot, plus an `AppendClip` that plays them in order |
-| [DaVinci Resolve](#davinci-resolve) *(Studio only)* | a clip in the Media Pool | a new timeline with the clip's picture and sound, cut up |
-| [Flame](#flame) | a clip in the Media Panel | a duplicate of the clip, cut up |
-| [xSTUDIO](#xstudio) | media or a timeline clip | a new timeline, or the timeline clip itself, cut up |
-| [Blender](#blender) | a movie strip in the Video Sequencer | the strip, cut in place, with its sound |
-| [Vegas Pro](#vegas-pro) | an item in Project Media, or a timeline event | a new video track, or the event itself, cut up |
+<div class="grid cards" markdown>
+
+- :simple-nuke:{ .lg .middle } **[Nuke](#nuke)**
+
+    ---
+
+    Launched from a Read node. **Send to Nuke** adds a `TimeClip` per shot, plus an `AppendClip` that plays them in order.
+
+- :simple-davinciresolve:{ .lg .middle } **[DaVinci Resolve](#davinci-resolve)** *(Studio only)*
+
+    ---
+
+    Launched from a clip in the Media Pool. **Send to Resolve** builds a new timeline with the clip's picture and sound, cut up.
+
+- :material-fire:{ .lg .middle } **[Flame](#flame)**
+
+    ---
+
+    Launched from a clip in the Media Panel. **Send to Flame** duplicates the clip and cuts the copy.
+
+- :material-monitor-eye:{ .lg .middle } **[xSTUDIO](#xstudio)**
+
+    ---
+
+    Launched from media or a timeline clip. **Send to xStudio** builds a new timeline, or cuts the timeline clip itself.
+
+- :simple-blender:{ .lg .middle } **[Blender](#blender)**
+
+    ---
+
+    Launched from a movie strip in the Video Sequencer. **Send to Blender** cuts the strip in place, with its sound.
+
+- :simple-vegas:{ .lg .middle } **[Vegas Pro](#vegas-pro)**
+
+    ---
+
+    Launched from Project Media or a timeline event. **Send to Vegas** cuts up a new video track, or the event itself.
+
+</div>
 
 Each one needs a one-time setup step inside the host, below. Custom columns and OCR text travel with the
 shots to every host that has somewhere to put them (a node's metadata, a marker, a clip property...).
 
-## Nuke
+## :simple-nuke: Nuke
 
 Point `NUKE_PATH` at the plugin before starting Nuke:
 
@@ -45,7 +76,7 @@ clip into CutDetectorPro — if the Read node's frame range is trimmed, only tha
 
 Every send adds a fresh set of nodes, as one undo step.
 
-## DaVinci Resolve
+## :simple-davinciresolve: DaVinci Resolve
 
 !!! warning "Requires DaVinci Resolve Studio"
 
@@ -68,7 +99,7 @@ carrying the name and any custom column values. Every send creates a new timelin
 
 Remove the menu script with `python3 install.py --uninstall`.
 
-## Flame
+## :material-fire: Flame
 
 Set the hook path before starting Flame:
 
@@ -85,7 +116,7 @@ This adds **CutDetectorPro → Cut Detector** to the Media Panel's right-click m
 original alone. Each piece is named after its shot, and custom column values go into the segment's comment.
 Every send makes a fresh copy.
 
-## xSTUDIO
+## :material-monitor-eye: xSTUDIO
 
 Add the plugin folder to xSTUDIO's Python plugin search paths — in **Preferences → Python → Python Plugins
 Search Paths**, or in the environment before starting it:
@@ -112,7 +143,7 @@ Custom column values land in the clip's properties under `cutdetectorpro`.
 
     If CutDetectorPro isn't found next to the `plugins` folder, set `CDP_APP_PATH` to its executable before starting xSTUDIO.
 
-## Blender
+## :simple-blender: Blender
 
 !!! info "Needs Blender 5.0 or later"
 
@@ -152,7 +183,7 @@ adds new cuts and updates names/values; existing cuts stay. Every send is one un
     While CutDetectorPro is open, the pieces are found again by their scene, channel and position — don't move
     the strip in the meantime.
 
-## Vegas Pro
+## :simple-vegas: Vegas Pro
 
 !!! warning "Vegas freezes while CutDetectorPro is open"
 
