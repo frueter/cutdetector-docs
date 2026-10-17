@@ -42,7 +42,7 @@ Before the OCR runs, a dialog opens with a few options for cleaning up the resul
 
 Both checkboxes are on by default, and the example line in the dialog shows what the options make of some sample text.
 
-<!-- MEDIA: screenshot of the dialog, a preset picked and the example line showing the result. -->
+![The OCR options dialog](assets/cdui_ocr_options.png){ width=600px }
 
 !!! tip "Options are remembered per column"
 
