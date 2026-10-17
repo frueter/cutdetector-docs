@@ -41,6 +41,18 @@ The frame number is also listed in the "Start Frame" column of the [Shots Table]
 
 Removed cuts are remembered (they are *blacklisted*), so moving the threshold later won't bring them back.
 
+### The film strip
+
+Below the previews, a strip of thumbnails shows the frames around the current one, like a piece of film: the
+previous frame to the left of the gap, the current one to its right, same as the two viewers above it. At a
+cut, the gap widens and the two frames point at each other.
+
+- **Click** a frame to go to it.
+- **Scroll** over the strip to step through the frames.
+
+A button next to the cache controls opens a small menu to show or hide the strip and set its size (ctrl+click
+the slider to reset); both choices are remembered.
+
 ## Contact Sheet Mode: find the cuts you missed
 
 ![Contact Sheet Mode](assets/cdui_contact_sheet_full_ui.png){ .shot }

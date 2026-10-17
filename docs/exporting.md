@@ -52,7 +52,7 @@ The [Shots Table](shots_table.md) is your cut list. Exporting turns it into what
     For human eyes and brains: thumbnails plus your columns.
 
     - PDF
-    - Excel (xls)
+    - Excel (.xlsx)
 
     ![Report exports](assets/cdui_export_reports.png){ width=300px }
 
@@ -86,7 +86,9 @@ The [Shots Table](shots_table.md) is your cut list. Exporting turns it into what
 - **Flagged Only:** tick the :material-flag: **Flag** checkbox on the shots you want in the table, then choose *Flagged Only* to export just those.
 - **One file per...** (editorial): write a separate file per value of any column. For example, one otio per sequence.
 - **Bundle by...** (media): sort thumbnails and sub-clips into a folder per value of any column, for example one folder per sequence.
+- **Handles** (media, sub-clips): extra frames before and after each shot. Where the source clip has no frames for them (before its first frame or after its last), black frames take their place, with the sound delayed to match and silent at the tail. Quick Export never adds handles.
 - **Several formats at once:** tick as many as you like.
+- **Naming:** a sub-clip or thumbnail is named after its shot. An unnamed shot gets a number for its position instead; shots that share a name are each numbered from 1 for that name (`sh010_1`, `sh010_2`, `sh030`, `sh040_1`...).
 - The manager describes in plain words what it is about to do, so you can check it before you export.
 
 <!-- MEDIA: 8 s loop of the Export Manager: tick Flagged Only, choose "one file per Sequence", tick otio + pdf, Export. -->

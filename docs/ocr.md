@@ -32,6 +32,20 @@ Don't have a column yet? [Add one](shots_table.md#add-your-own-columns) first.
     Install it and select it in **Preferences**, or set `CDUI_TESSERACT_PATH`. See [Install & Activate](installation.md#3-tesseract-and-ffmpeg).
     If a cell shows `[ERROR: tesseract not found]` or `[ERROR: tesseract failed]` instead of text, the same applies.
 
+## Choose how the text is read
+
+Before the OCR runs, a dialog opens with a few options for cleaning up the result on the way in:
+
+- **Allowed characters**: the only characters OCR may read; leave empty to allow any. Presets fill it in for **Timecode** (digits, `:` and `;`), **Letters and numbers**, **Letters only** and **Numbers only**. Spaces, quotes and backslashes can't be used.
+- **Read a single line of text**: often reads burnt-in timecode and shot names more accurately.
+- **Replace whitespace with**: replaces every run of spaces and line breaks with the character(s) you enter, or removes them if you leave the field empty — `SH 010 A` becomes `SH_010_A`.
+
+Both checkboxes are on by default, and the example line in the dialog shows what the options make of some sample text.
+
+!!! tip "Options are remembered per column"
+
+    Each column keeps its own choices, saved in the session file. A new column starts with the options used last.
+
 ## Clean up the text
 
 OCR isn't perfect. In the recording above, for example, an "S" sometimes came through as a "$".

@@ -40,6 +40,11 @@ When you do, please include your support info. See [Getting help](#getting-help)
 
     Only now and then. CutDetectorPro re-checks your license about once a week, and keeps working for up to 14 days if you're offline at that point.
 
+??? question "Activation failed: I've used up all of this key's activations"
+
+    Each key only has so many activations (see the [pricing page](buy.md) for how many). The activation dialog explains this and points you to deactivating an old machine, see "I'm moving to a new computer" above.
+    Still stuck? Ask on [Discord :fontawesome-brands-discord:](https://discord.gg/puzJUaQdxD).
+
 ## Cut detection
 
 ??? question "I get too many cuts"

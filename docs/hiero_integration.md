@@ -2,6 +2,10 @@
 
 Using Foundry's Hiero? Launch CutDetectorPro right from a bin item or a track item and get **soft cuts** back, with no exporting and importing in between.
 
+!!! tip "Not using Hiero?"
+
+    Nuke, DaVinci Resolve, Flame, xSTUDIO, Blender and Vegas Pro are also supported. See [Host Integrations](plugins.md).
+
 !!! info "Needs an activated license"
 
     The `Apply` button that sends results back to Hiero is one of the features that is switched off in demo mode. See [Install & Activate](installation.md#2-activate-your-license).
@@ -61,6 +65,8 @@ What Hiero does with them depends on where you started.
     If the clip has an in and/or out point set in Hiero, CutDetectorPro opens with that range already requested, so only that part is analysed (see [Sub-range analysis](sub_range.md)).
     Without in/out points the whole clip is analysed.
 
+    If the clip has sound, the new sequence carries its audio tracks too, cut at the same frames and linked to the picture of each shot.
+
 === ":material-timeline: From a track item"
 
     Right-click a track item in the timeline and choose **Cut Detector**. The part of the clip the track item uses (its source in and out) is requested for you, so only the footage that is actually in your cut gets analysed.
@@ -68,8 +74,11 @@ What Hiero does with them depends on where you started.
     When you hit `Apply`, the track item is cut up **in place**:
 
     - It's split at every cut, as soft cuts.
+    - If the track item's linked sound is selected too, its audio track is cut along with the picture, and the new pieces stay linked.
     - The pieces are named after their shot names.
     - Shots that start outside the track item's range are ignored.
+
+Either way, each `Apply` is a single step in **Edit → Undo**.
 
 <!-- MEDIA: two 10 s clips. 1) right-click a bin item > Cut Detector > Apply > new sequence appears. 2) right-click a track item on the timeline > Apply > the item is razored into named shots. -->
 

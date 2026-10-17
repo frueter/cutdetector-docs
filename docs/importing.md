@@ -23,6 +23,33 @@ Pick whichever you like best:
 
 <!-- TODO(frank): confirm the list of formats/codecs you have tested, e.g. ProRes, DNxHD, MXF -->
 
+## Import cuts from an edit
+
+Already have the edit of this clip as an **OTIO, EDL, XML (Final Cut Pro 7) or AAF** file? Take its cuts
+instead of detecting them. A clip has to be loaded first, then:
+
+- Click **Import Cuts...** next to the Analyse button
+- Choose **File → Import Cuts...** from the menu
+- Drag & drop the file onto the window
+
+=== ":material-magnify-scan: Before the clip is analysed"
+
+    The file provides the cuts on its own. The [Spike Graph](spike_graph.md) shows them as full spikes, with nothing in between.
+
+=== ":material-content-cut: On top of an analysis"
+
+    The graph stays as it is. Cuts that aren't in the file are deleted ([blacklisted](spike_graph.md#editing-in-the-graph), red); cuts only the file has are added (whitelisted, green).
+    The [Shots Table](shots_table.md) is rebuilt for this, which empties shot names and custom columns, so CutDetectorPro asks first and tells you how many of your manually added cuts aren't in the file.
+
+Shots take their names from the clips in the file. Gaps become shots that aren't flagged, and a dissolve becomes a cut where it starts.
+Several video tracks are combined into one list of cuts.
+
+!!! info "How the file lines up with the clip"
+
+    The file is expected to describe the loaded clip from its first frame, whatever timecode its timeline starts at.
+    Shots past the end of the clip, or outside the [sub-range](sub_range.md)'s in/out points, are left out with a warning.
+    An EDL is read at the clip's frame rate; for the other formats, a warning tells you if their frame rate differs from the clip's.
+
 ## Save and reload your work
 
 Everything you do lives in a **session**: the analysis, your threshold, every manual edit and your text columns.

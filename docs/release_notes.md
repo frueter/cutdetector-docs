@@ -1,6 +1,59 @@
 # Release Notes
 :material-puzzle-plus: New Feature  :fontawesome-solid-bug-slash: Bug Fix  :simple-renovate: Improvements
 
+## v0.6.0 (beta)
+:material-puzzle-plus: New host integrations: **Nuke, DaVinci Resolve, Flame, xSTUDIO, Blender and Vegas Pro**, alongside Hiero. See [Host Integrations](plugins.md)
+
+:material-puzzle-plus: Cuts can now be **imported** from an existing OTIO, EDL, XML (Final Cut Pro 7) or AAF file instead of (or on top of) detecting them. See [Import & Sessions](importing.md#import-cuts-from-an-edit)
+
+:material-puzzle-plus: A **film strip** below the previews shows the frames around the current one: click a frame to go to it, scroll to step through them. See [Review & Fix Cuts](review.md#the-film-strip)
+
+:material-puzzle-plus: The gear button now opens a dialog to choose **how OCR reads a column**: allowed characters (with presets for timecode, letters, numbers), reading a single line, and replacing whitespace. See [Text Extraction](ocr.md#choose-how-the-text-is-read)
+
+:material-puzzle-plus: The **Handles** setting in the Export Manager's clip export now works: extra frames before/after each shot, black where the source clip has none. See [Exporting](exporting.md#export-manager-tips)
+
+:material-puzzle-plus: Hiero: cutting a clip now cuts its **linked sound** along with the picture, as one undo step. DaVinci Resolve's new timelines and xSTUDIO's new/cut timelines now carry sound the same way
+
+:material-puzzle-plus: The host plugins, and the shared package they're built on, are published under the **BSD 3-Clause License**, so you can build your own. See [Writing a Custom Plugin](writing_a_plugin.md)
+
+:simple-renovate: Refreshed the app's look: one dark palette and accent colour throughout
+
+:simple-renovate: Redesigned the film strip: flat, overlapping cards instead of a curved reel
+
+:simple-renovate: The Excel report is now written as `.xlsx` (the export option keeps its name, "XLS")
+
+:simple-renovate: Shots that share a name are now numbered from 1 for every name when exported as clips or thumbnails (`sh010_1`, `sh010_2`), instead of by their position among all shots
+
+:simple-renovate: A clearer message when you've used up a license key's activations, pointing to deactivation and support
+
+:simple-renovate: Export errors now show a message instead of failing silently
+
+:simple-renovate: **Help → About CutDetectorPro → Environment** now also lists the host plugins' environment variables
+
+:fontawesome-solid-bug-slash: Fixed the Excel report never actually being written
+
+:fontawesome-solid-bug-slash: Fixed exported sub-clips being one frame too long
+
+:fontawesome-solid-bug-slash: Fixed **One file per...** for EDL, XML and AAF exports, and for shots with no value in that column
+
+:fontawesome-solid-bug-slash: Fixed shot names and column values that aren't safe as file or folder names breaking exports
+
+:fontawesome-solid-bug-slash: Fixed empty OTIO entries for custom columns with no value
+
+:fontawesome-solid-bug-slash: Fixed the analysis state not resetting when a new clip was imported over an existing one
+
+:fontawesome-solid-bug-slash: Fixed crashes when frame caching was stopped, or its clip replaced, mid-cache
+
+:fontawesome-solid-bug-slash: Fixed caching carrying on after a new clip was imported while it was running
+
+:fontawesome-solid-bug-slash: Fixed the progress bar's cancel button sometimes cancelling more than the current analysis
+
+:fontawesome-solid-bug-slash: Fixed custom columns becoming unusable after the Shots Table was rebuilt (for example by importing cuts)
+
+:fontawesome-solid-bug-slash: Fixed CSV exports and thumbnails not writing under non-ASCII names on Windows
+
+---
+
 ## v0.5.2 (beta)
 :material-puzzle-plus: The shots graph can now be zoomed: drag the zoom slider below the graph, scroll to zoom with the mouse wheel, or middle-click and drag to zoom straight into a region. See [Spike Graph](spike_graph.md#zooming-in)
 

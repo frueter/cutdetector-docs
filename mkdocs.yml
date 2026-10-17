@@ -28,7 +28,9 @@ nav:
     - Exporting: exporting.md
 
   - Integrations:
+    - Overview: plugins.md
     - Hiero: hiero_integration.md
+    - Writing a Custom Plugin: writing_a_plugin.md
 
   - Reference:
     - Shortcuts: shortcuts.md
@@ -91,6 +93,8 @@ markdown_extensions:
               - detecting_cuts.md
               - sub_range.md
               - installation.md
+              - plugins.md
+              - writing_a_plugin.md
 
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
