@@ -93,7 +93,7 @@ The [Shots Table](shots_table.md) is your cut list. Exporting turns it into what
 
 <!-- MEDIA: 8 s loop of the Export Manager: tick Flagged Only, choose "one file per Sequence", tick otio + pdf, Export. -->
 
-<!-- MEDIA: screenshot of the Export Manager's Media page with Clips ticked and the Handles field filled in. -->
+![The Export Manager's Media page with Handles set to 8 frames](assets/cdui_export_handles.png){ width=700px }
 
 !!! note "Missing a format?"
 

@@ -29,14 +29,16 @@ Already have the edit of this clip as an **OTIO, EDL, XML (Final Cut Pro 7) or A
 instead of detecting them. A clip has to be loaded first, then:
 
 - Click **Import Cuts...** next to the Analyse button
-- Choose **File → Import Cuts...** from the menu
+- Choose **File → Import Cuts...** from the menu, or press ++ctrl+shift+i++ (++cmd+shift+i++ on macOS)
 - Drag & drop the file onto the window
 
-<!-- MEDIA: screenshot of the Import Cuts... menu entry/button. -->
+![The Import Cuts entry in the File menu](assets/cdui_import_cuts_menu.png){ width=350px }
 
 === ":material-magnify-scan: Before the clip is analysed"
 
     The file provides the cuts on its own. The [Spike Graph](spike_graph.md) shows them as full spikes, with nothing in between.
+
+    ![The graph right after importing cuts, before analysis: full spikes, nothing in between](assets/cdui_import_cuts_graph.png)
 
 === ":material-content-cut: On top of an analysis"
 
@@ -45,8 +47,6 @@ instead of detecting them. A clip has to be loaded first, then:
 
 Shots take their names from the clips in the file. Gaps become shots that aren't flagged, and a dissolve becomes a cut where it starts.
 Several video tracks are combined into one list of cuts.
-
-<!-- MEDIA: screenshot of the graph right after importing cuts, before analysis: full spikes, nothing in between. -->
 
 !!! info "How the file lines up with the clip"
 

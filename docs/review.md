@@ -53,7 +53,7 @@ cut, the gap widens and the two frames point at each other.
 A button next to the cache controls opens a small menu to show or hide the strip and set its size (ctrl+click
 the slider to reset); both choices are remembered.
 
-<!-- MEDIA: short loop of the film strip: scrolling through frames, clicking one to jump, a cut's pointed gap passing by, then opening the size/visibility menu. -->
+![The film strip below the previews, with the size/visibility menu open](assets/cdui_film_strip.png){ .shot }
 
 ## Contact Sheet Mode: find the cuts you missed
 

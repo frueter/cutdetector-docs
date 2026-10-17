@@ -65,7 +65,7 @@ The cache bar also zooms in to show just the analysed range, and its handles dis
 Once a range has been analysed, the preview shows a shot-relative frame number in brackets next to the global one, for example `142 (12)`.
 That is frame 142 of the clip, and the 12th frame of its shot. Handy for judging where you are in a shot without doing the maths.
 
-<!-- MEDIA: screenshot of the viewer with the bracketed local frame number visible, e.g. "142 (12)". -->
+![The bracketed local frame number next to the global one, in both viewers](assets/cdui_local_frame_number.png){ .shot }
 
 ## Saving and loading
 

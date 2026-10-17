@@ -7,6 +7,7 @@ Every keyboard shortcut in one place. On macOS, read ++ctrl++ as ++cmd++.
 | Shortcut | Function |
 |----------|----------|
 | ++ctrl+i++ | Import a clip |
+| ++ctrl+shift+i++ | [Import Cuts](importing.md#import-cuts-from-an-edit) from an OTIO, EDL, XML or AAF file (once a clip is loaded) |
 | ++ctrl+o++ | Open a session file (`.cdui`) |
 | ++ctrl+s++ | Save the session file |
 | ++ctrl+q++ | Quit |
