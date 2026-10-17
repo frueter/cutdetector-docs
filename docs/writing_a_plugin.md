@@ -20,6 +20,23 @@ the code is yours to copy: the plugins, the shared package and the template belo
 
 CutDetectorPro always runs as its own process — nothing of it loads into the host.
 
+```mermaid
+sequenceDiagram
+    participant Host
+    participant Plugin
+    participant CutDetectorPro
+
+    Host->>Plugin: user picks a clip, chooses the menu entry
+    Plugin->>Plugin: open a local port
+    Plugin->>CutDetectorPro: launch(clip, port, host name)
+    loop as many times as the user likes
+        CutDetectorPro->>Plugin: connect to port, send shots
+        Plugin->>Host: apply_result() - cut a clip, build a timeline, create nodes
+    end
+    CutDetectorPro->>Plugin: app closed
+    Plugin->>Plugin: stop listening
+```
+
 ## Start from the template
 
 The quickest way to see the whole round trip, with no host involved, is to copy the template and run it from

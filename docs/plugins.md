@@ -35,6 +35,8 @@ export NUKE_PATH=/path/to/CutDetectorPro/plugins/nuke
 This adds **Cut Detector** to the node graph's right-click menu. Select a Read node and choose it to load the
 clip into CutDetectorPro — if the Read node's frame range is trimmed, only that range is analysed.
 
+<!-- MEDIA: screenshot of the Read node's right-click menu showing Cut Detector. -->
+
 **Send to Nuke** adds, below the Read node:
 
 - a **TimeClip** per shot, named after the shot
@@ -58,6 +60,8 @@ python3 /path/to/CutDetectorPro/plugins/resolve/install.py
 Restart Resolve, select a clip in the Media Pool and choose **Workspace → Scripts → CutDetectorPro**. In/out
 marks on the clip limit the analysis to that range.
 
+<!-- MEDIA: screenshot of the Workspace > Scripts > CutDetectorPro menu entry. -->
+
 **Send to Resolve** builds a new timeline from the shots in the same Media Pool folder as the clip. If the clip
 has sound, it's added on matching audio tracks, cut and linked to each shot's picture. Named shots get a marker
 carrying the name and any custom column values. Every send creates a new timeline.
@@ -74,6 +78,8 @@ export DL_PYTHON_HOOK_PATH=/path/to/CutDetectorPro/plugins/flame/hooks
 
 This adds **CutDetectorPro → Cut Detector** to the Media Panel's right-click menu. Select one or more clips
 (single media files that haven't been cut yet) and choose it. A trimmed clip only has its visible range analysed.
+
+<!-- MEDIA: screenshot of the Media Panel's right-click menu showing CutDetectorPro > Cut Detector. -->
 
 **Send to Flame** duplicates the clip as `<clip name>_cutdetect` and cuts the copy into shots, leaving the
 original alone. Each piece is named after its shot, and custom column values go into the segment's comment.
@@ -97,6 +103,8 @@ not image sequences):
 - **From a timeline clip:** analyses the part of the file that clip shows. **Send to xStudio** cuts that clip
   (and its linked sound) in place. Sending again adds any new cuts and updates names/values; cuts already made
   are never removed.
+
+<!-- MEDIA: screenshot of the media list or timeline clip right-click menu showing Cut Detector. -->
 
 Custom column values land in the clip's properties under `cutdetectorpro`.
 
@@ -133,6 +141,8 @@ This adds **Cut Detector** to the **Strip** menu and to the Video Sequencer's ri
 strip (a single file on disk, not retimed or reversed) and choose it — a trimmed strip only analyses the part
 it shows.
 
+<!-- MEDIA: screenshot of the Strip menu or Video Sequencer right-click menu showing Cut Detector. -->
+
 **Send to Blender** cuts the strip in place, along with any sound strip connected to it, same as splitting it
 by hand. Custom column values are stored on each piece as a `cutdetectorpro` custom property. Sending again
 adds new cuts and updates names/values; existing cuts stay. Every send is one undo step.
@@ -156,6 +166,8 @@ Menu` folder to get a permanent entry under **Tools → Scripting**.
 Select either an item in the **Project Media** panel or a single video event on the timeline, then run the
 script. From Project Media, the whole clip is placed on a new video track; from the timeline, the selected
 event is used directly.
+
+<!-- MEDIA: screenshot of the Tools > Scripting menu with cdp_vegas.cs. -->
 
 Running the script again on an already-cut target is safe: only cuts that aren't already a piece boundary get
 split, and a piece's name and custom column values only change where they differ. The event's playback rate

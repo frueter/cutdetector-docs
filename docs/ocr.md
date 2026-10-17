@@ -42,6 +42,8 @@ Before the OCR runs, a dialog opens with a few options for cleaning up the resul
 
 Both checkboxes are on by default, and the example line in the dialog shows what the options make of some sample text.
 
+<!-- MEDIA: screenshot of the dialog, a preset picked and the example line showing the result. -->
+
 !!! tip "Options are remembered per column"
 
     Each column keeps its own choices, saved in the session file. A new column starts with the options used last.

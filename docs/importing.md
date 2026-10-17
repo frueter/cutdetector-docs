@@ -32,6 +32,8 @@ instead of detecting them. A clip has to be loaded first, then:
 - Choose **File → Import Cuts...** from the menu
 - Drag & drop the file onto the window
 
+<!-- MEDIA: screenshot of the Import Cuts... menu entry/button. -->
+
 === ":material-magnify-scan: Before the clip is analysed"
 
     The file provides the cuts on its own. The [Spike Graph](spike_graph.md) shows them as full spikes, with nothing in between.
@@ -43,6 +45,8 @@ instead of detecting them. A clip has to be loaded first, then:
 
 Shots take their names from the clips in the file. Gaps become shots that aren't flagged, and a dissolve becomes a cut where it starts.
 Several video tracks are combined into one list of cuts.
+
+<!-- MEDIA: screenshot of the graph right after importing cuts, before analysis: full spikes, nothing in between. -->
 
 !!! info "How the file lines up with the clip"
 
